@@ -1,0 +1,48 @@
+name: Julkaise sivusto
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "scripts/rakenna_sivusto.py"
+      - "scripts/paivita_hinnat.py"
+      - "data/kuntatiedot.json"
+      - ".github/workflows/julkaise.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  rakenna:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ vars.SITE_URL || 'https://miksu900.github.io/metsa' }}
+      DOMAIN: ${{ vars.DOMAIN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Rakenna sivusto
+        run: python scripts/rakenna_sivusto.py
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  julkaise:
+    needs: rakenna
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4

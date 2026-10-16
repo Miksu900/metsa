@@ -50,7 +50,34 @@ def vol_frame(luokka, etuliite=""):
     cols[etuliite + "muu"] = st.groupby("standid").muu.sum()
     return pd.DataFrame(cols).fillna(0.0)
 vol = vol_frame("2")            # ajantasaistettu tila
-vol3 = vol_frame("3", "f_")     # ennuste noin 10 vuotta eteenpäin
+# Ennuste (~10 v): luokalla 3 ei ole latvuskerroksia, vain yhteenveto -> skaalataan nykyinen puulajijakauma
+_sm = tbl("treestandsummary")[["treestandid", "volume", "sawlogvolume", "pulpwoodvolume", "maintreespecies"]] \
+    if "maintreespecies" in tbl("treestandsummary").columns else None
+_sm0 = tbl("treestandsummary")
+def _sum(luokka):
+    t = ts_all[ts_all.treestandclass == luokka][["treestandid", "standid"]]
+    x = _sm0.merge(t, on="treestandid")
+    return x.groupby("standid")[["volume", "sawlogvolume", "pulpwoodvolume"]].sum()
+_s2, _s3 = _sum("2"), _sum("3")
+_ms = ts_all[ts_all.treestandclass == "3"].dropna(subset=["maintreespecies"]).drop_duplicates("standid").set_index("standid")["maintreespecies"]
+vol3 = pd.DataFrame(index=vol.index.union(_s3.index))
+for r in ["ma", "ku", "ko", "le"]:
+    vol3["f_" + r + "_t"] = 0.0; vol3["f_" + r + "_k"] = 0.0
+vol3["f_muu"] = 0.0
+for sid in vol3.index:
+    f = _s3.loc[sid] if sid in _s3.index else None
+    if f is None: continue
+    c = vol.loc[sid] if sid in vol.index else None
+    c2 = _s2.loc[sid] if sid in _s2.index else None
+    ft, fk = float(f.sawlogvolume or 0), float(f.pulpwoodvolume or 0)
+    fm = max(float(f.volume or 0) - ft - fk, 0.0)
+    ct = sum(c[r + "_t"] for r in ["ma", "ku", "ko", "le"]) if c is not None else 0.0
+    ck = sum(c[r + "_k"] for r in ["ma", "ku", "ko", "le"]) if c is not None else 0.0
+    ryh = RYHMA.get(str(_ms.get(sid, "")), "le")
+    for r in ["ma", "ku", "ko", "le"]:
+        vol3.at[sid, "f_" + r + "_t"] = ft * c[r + "_t"] / ct if ct > 0 else (ft if r == ryh else 0.0)
+        vol3.at[sid, "f_" + r + "_k"] = fk * c[r + "_k"] / ck if ck > 0 else (fk if r == ryh else 0.0)
+    vol3.at[sid, "f_muu"] = fm
 gp = tbl("growthplacedata")[["standid", "maingroup", "fertilityclass"]]
 # ikä ja kehitysluokka (ajantasaistettu tila)
 ts2 = ts_all[ts_all.treestandclass == "2"][["treestandid", "standid", "developmentclass"]]

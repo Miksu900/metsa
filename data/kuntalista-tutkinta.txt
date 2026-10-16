@@ -1,2 +1,6 @@
-kunta-luokituksia: [('kunta_1_20110101', 'Kunnat 2011'), ('kunta_1_20120101', 'Kunnat 2012'), ('kunta_1_20130101', 'Kunnat 2013'), ('kunta_1_20140101', 'Kunnat 2014'), ('kunta_1_20150101', 'Kunnat 2015'), ('kunta_1_20160101', 'Kunnat 2016')]
-maakunta-luokituksia: [('maakunta_1_20210101', 'Maakunnat 2021'), ('maakunta_1_20240101', 'Maakunnat 2024'), ('maakunta_1_20260101', 'Maakunnat 2026'), ('maakunta_1_20250101', 'Maakunnat 2025')]
+kunta-luokitukset: ['kunta_1_19700101', 'kunta_1_19710101', 'kunta_1_19720101'] ... ['kunta_1_20240101', 'kunta_1_20250101', 'kunta_1_20260101'] 57
+uusin: kunta_1_20260101
+kuntia: 308 [('020', {'nimi': 'Akaa'}), ('005', {'nimi': 'Alajärvi'}), ('009', {'nimi': 'Alavieska'})]
+vastaavuus ok kunta_1_20260101%23maakunta_1_20260101 308
+vanhoja kuntanumeroita: 227
+näytteet: [('977', {'nimi': 'Ylivieska', 'maakunta': '17', 'maakunta_nimi': 'Pohjois-Pohjanmaa'}), ('846', {'nimi': 'Teuva', 'maakunta': '14', 'maakunta_nimi': 'Etelä-Pohjanmaa'}), ('564', {'nimi': 'Oulu', 'maakunta': '17', 'maakunta_nimi': 'Pohjois-Pohjanmaa'}), ('091', {'nimi': 'Helsinki', 'maakunta': '01', 'maakunta_nimi': 'Uusimaa'}), ('853', {'nimi': 'Turku', 'maakunta': '02', 'maakunta_nimi': 'Varsinais-Suomi'})]

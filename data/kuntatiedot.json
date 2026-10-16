@@ -1,0 +1,1773 @@
+{
+"kunnat": {
+"020": {
+"nimi": "Akaa",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"005": {
+"nimi": "Alajärvi",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"009": {
+"nimi": "Alavieska",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"010": {
+"nimi": "Alavus",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"016": {
+"nimi": "Asikkala",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"018": {
+"nimi": "Askola",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"019": {
+"nimi": "Aura",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"035": {
+"nimi": "Brändö",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"043": {
+"nimi": "Eckerö",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"046": {
+"nimi": "Enonkoski",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"047": {
+"nimi": "Enontekiö",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"049": {
+"nimi": "Espoo",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"050": {
+"nimi": "Eura",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"051": {
+"nimi": "Eurajoki",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"052": {
+"nimi": "Evijärvi",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"060": {
+"nimi": "Finström",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"061": {
+"nimi": "Forssa",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"062": {
+"nimi": "Föglö",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"065": {
+"nimi": "Geta",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"069": {
+"nimi": "Haapajärvi",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"071": {
+"nimi": "Haapavesi",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"072": {
+"nimi": "Hailuoto",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"074": {
+"nimi": "Halsua",
+"maakunta": "16",
+"maakunta_nimi": "Keski-Pohjanmaa"
+},
+"075": {
+"nimi": "Hamina",
+"maakunta": "08",
+"maakunta_nimi": "Kymenlaakso"
+},
+"076": {
+"nimi": "Hammarland",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"077": {
+"nimi": "Hankasalmi",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"078": {
+"nimi": "Hanko",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"079": {
+"nimi": "Harjavalta",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"081": {
+"nimi": "Hartola",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"082": {
+"nimi": "Hattula",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"086": {
+"nimi": "Hausjärvi",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"111": {
+"nimi": "Heinola",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"090": {
+"nimi": "Heinävesi",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"091": {
+"nimi": "Helsinki",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"097": {
+"nimi": "Hirvensalmi",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"098": {
+"nimi": "Hollola",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"102": {
+"nimi": "Huittinen",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"103": {
+"nimi": "Humppila",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"105": {
+"nimi": "Hyrynsalmi",
+"maakunta": "18",
+"maakunta_nimi": "Kainuu"
+},
+"106": {
+"nimi": "Hyvinkää",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"108": {
+"nimi": "Hämeenkyrö",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"109": {
+"nimi": "Hämeenlinna",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"139": {
+"nimi": "Ii",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"140": {
+"nimi": "Iisalmi",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"142": {
+"nimi": "Iitti",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"143": {
+"nimi": "Ikaalinen",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"145": {
+"nimi": "Ilmajoki",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"146": {
+"nimi": "Ilomantsi",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"153": {
+"nimi": "Imatra",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"148": {
+"nimi": "Inari",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"149": {
+"nimi": "Inkoo",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"151": {
+"nimi": "Isojoki",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"152": {
+"nimi": "Isokyrö",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"165": {
+"nimi": "Janakkala",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"167": {
+"nimi": "Joensuu",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"169": {
+"nimi": "Jokioinen",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"170": {
+"nimi": "Jomala",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"171": {
+"nimi": "Joroinen",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"172": {
+"nimi": "Joutsa",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"176": {
+"nimi": "Juuka",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"177": {
+"nimi": "Juupajoki",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"178": {
+"nimi": "Juva",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"179": {
+"nimi": "Jyväskylä",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"181": {
+"nimi": "Jämijärvi",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"182": {
+"nimi": "Jämsä",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"186": {
+"nimi": "Järvenpää",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"202": {
+"nimi": "Kaarina",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"204": {
+"nimi": "Kaavi",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"205": {
+"nimi": "Kajaani",
+"maakunta": "18",
+"maakunta_nimi": "Kainuu"
+},
+"208": {
+"nimi": "Kalajoki",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"211": {
+"nimi": "Kangasala",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"213": {
+"nimi": "Kangasniemi",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"214": {
+"nimi": "Kankaanpää",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"216": {
+"nimi": "Kannonkoski",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"217": {
+"nimi": "Kannus",
+"maakunta": "16",
+"maakunta_nimi": "Keski-Pohjanmaa"
+},
+"218": {
+"nimi": "Karijoki",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"224": {
+"nimi": "Karkkila",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"226": {
+"nimi": "Karstula",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"230": {
+"nimi": "Karvia",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"231": {
+"nimi": "Kaskinen",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"232": {
+"nimi": "Kauhajoki",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"233": {
+"nimi": "Kauhava",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"235": {
+"nimi": "Kauniainen",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"236": {
+"nimi": "Kaustinen",
+"maakunta": "16",
+"maakunta_nimi": "Keski-Pohjanmaa"
+},
+"239": {
+"nimi": "Keitele",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"240": {
+"nimi": "Kemi",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"320": {
+"nimi": "Kemijärvi",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"241": {
+"nimi": "Keminmaa",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"322": {
+"nimi": "Kemiönsaari",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"244": {
+"nimi": "Kempele",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"245": {
+"nimi": "Kerava",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"249": {
+"nimi": "Keuruu",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"250": {
+"nimi": "Kihniö",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"256": {
+"nimi": "Kinnula",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"257": {
+"nimi": "Kirkkonummi",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"260": {
+"nimi": "Kitee",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"261": {
+"nimi": "Kittilä",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"263": {
+"nimi": "Kiuruvesi",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"265": {
+"nimi": "Kivijärvi",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"271": {
+"nimi": "Kokemäki",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"272": {
+"nimi": "Kokkola",
+"maakunta": "16",
+"maakunta_nimi": "Keski-Pohjanmaa"
+},
+"273": {
+"nimi": "Kolari",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"275": {
+"nimi": "Konnevesi",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"276": {
+"nimi": "Kontiolahti",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"280": {
+"nimi": "Korsnäs",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"284": {
+"nimi": "Koski Tl",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"285": {
+"nimi": "Kotka",
+"maakunta": "08",
+"maakunta_nimi": "Kymenlaakso"
+},
+"286": {
+"nimi": "Kouvola",
+"maakunta": "08",
+"maakunta_nimi": "Kymenlaakso"
+},
+"287": {
+"nimi": "Kristiinankaupunki",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"288": {
+"nimi": "Kruunupyy",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"290": {
+"nimi": "Kuhmo",
+"maakunta": "18",
+"maakunta_nimi": "Kainuu"
+},
+"291": {
+"nimi": "Kuhmoinen",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"295": {
+"nimi": "Kumlinge",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"297": {
+"nimi": "Kuopio",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"300": {
+"nimi": "Kuortane",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"301": {
+"nimi": "Kurikka",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"304": {
+"nimi": "Kustavi",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"305": {
+"nimi": "Kuusamo",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"312": {
+"nimi": "Kyyjärvi",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"316": {
+"nimi": "Kärkölä",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"317": {
+"nimi": "Kärsämäki",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"318": {
+"nimi": "Kökar",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"398": {
+"nimi": "Lahti",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"399": {
+"nimi": "Laihia",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"400": {
+"nimi": "Laitila",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"407": {
+"nimi": "Lapinjärvi",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"402": {
+"nimi": "Lapinlahti",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"403": {
+"nimi": "Lappajärvi",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"405": {
+"nimi": "Lappeenranta",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"408": {
+"nimi": "Lapua",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"410": {
+"nimi": "Laukaa",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"416": {
+"nimi": "Lemi",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"417": {
+"nimi": "Lemland",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"418": {
+"nimi": "Lempäälä",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"420": {
+"nimi": "Leppävirta",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"421": {
+"nimi": "Lestijärvi",
+"maakunta": "16",
+"maakunta_nimi": "Keski-Pohjanmaa"
+},
+"422": {
+"nimi": "Lieksa",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"423": {
+"nimi": "Lieto",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"425": {
+"nimi": "Liminka",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"426": {
+"nimi": "Liperi",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"444": {
+"nimi": "Lohja",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"430": {
+"nimi": "Loimaa",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"433": {
+"nimi": "Loppi",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"434": {
+"nimi": "Loviisa",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"435": {
+"nimi": "Luhanka",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"436": {
+"nimi": "Lumijoki",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"438": {
+"nimi": "Lumparland",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"440": {
+"nimi": "Luoto",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"441": {
+"nimi": "Luumäki",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"475": {
+"nimi": "Maalahti",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"478": {
+"nimi": "Maarianhamina - Mariehamn",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"480": {
+"nimi": "Marttila",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"481": {
+"nimi": "Masku",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"483": {
+"nimi": "Merijärvi",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"484": {
+"nimi": "Merikarvia",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"489": {
+"nimi": "Miehikkälä",
+"maakunta": "08",
+"maakunta_nimi": "Kymenlaakso"
+},
+"491": {
+"nimi": "Mikkeli",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"494": {
+"nimi": "Muhos",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"495": {
+"nimi": "Multia",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"498": {
+"nimi": "Muonio",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"499": {
+"nimi": "Mustasaari",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"500": {
+"nimi": "Muurame",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"503": {
+"nimi": "Mynämäki",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"504": {
+"nimi": "Myrskylä",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"505": {
+"nimi": "Mäntsälä",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"508": {
+"nimi": "Mänttä-Vilppula",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"507": {
+"nimi": "Mäntyharju",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"529": {
+"nimi": "Naantali",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"531": {
+"nimi": "Nakkila",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"535": {
+"nimi": "Nivala",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"536": {
+"nimi": "Nokia",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"538": {
+"nimi": "Nousiainen",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"541": {
+"nimi": "Nurmes",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"543": {
+"nimi": "Nurmijärvi",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"545": {
+"nimi": "Närpiö",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"560": {
+"nimi": "Orimattila",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"561": {
+"nimi": "Oripää",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"562": {
+"nimi": "Orivesi",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"563": {
+"nimi": "Oulainen",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"564": {
+"nimi": "Oulu",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"309": {
+"nimi": "Outokumpu",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"576": {
+"nimi": "Padasjoki",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"577": {
+"nimi": "Paimio",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"578": {
+"nimi": "Paltamo",
+"maakunta": "18",
+"maakunta_nimi": "Kainuu"
+},
+"445": {
+"nimi": "Parainen",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"580": {
+"nimi": "Parikkala",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"581": {
+"nimi": "Parkano",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"599": {
+"nimi": "Pedersören kunta",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"583": {
+"nimi": "Pelkosenniemi",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"854": {
+"nimi": "Pello",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"584": {
+"nimi": "Perho",
+"maakunta": "16",
+"maakunta_nimi": "Keski-Pohjanmaa"
+},
+"592": {
+"nimi": "Petäjävesi",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"593": {
+"nimi": "Pieksämäki",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"595": {
+"nimi": "Pielavesi",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"598": {
+"nimi": "Pietarsaari",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"601": {
+"nimi": "Pihtipudas",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"604": {
+"nimi": "Pirkkala",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"607": {
+"nimi": "Polvijärvi",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"608": {
+"nimi": "Pomarkku",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"609": {
+"nimi": "Pori",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"611": {
+"nimi": "Pornainen",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"638": {
+"nimi": "Porvoo",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"614": {
+"nimi": "Posio",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"615": {
+"nimi": "Pudasjärvi",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"616": {
+"nimi": "Pukkila",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"619": {
+"nimi": "Punkalaidun",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"620": {
+"nimi": "Puolanka",
+"maakunta": "18",
+"maakunta_nimi": "Kainuu"
+},
+"623": {
+"nimi": "Puumala",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"624": {
+"nimi": "Pyhtää",
+"maakunta": "08",
+"maakunta_nimi": "Kymenlaakso"
+},
+"625": {
+"nimi": "Pyhäjoki",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"626": {
+"nimi": "Pyhäjärvi",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"630": {
+"nimi": "Pyhäntä",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"631": {
+"nimi": "Pyhäranta",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"635": {
+"nimi": "Pälkäne",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"636": {
+"nimi": "Pöytyä",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"678": {
+"nimi": "Raahe",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"710": {
+"nimi": "Raasepori",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"680": {
+"nimi": "Raisio",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"681": {
+"nimi": "Rantasalmi",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"683": {
+"nimi": "Ranua",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"684": {
+"nimi": "Rauma",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"686": {
+"nimi": "Rautalampi",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"687": {
+"nimi": "Rautavaara",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"689": {
+"nimi": "Rautjärvi",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"691": {
+"nimi": "Reisjärvi",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"694": {
+"nimi": "Riihimäki",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"697": {
+"nimi": "Ristijärvi",
+"maakunta": "18",
+"maakunta_nimi": "Kainuu"
+},
+"698": {
+"nimi": "Rovaniemi",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"700": {
+"nimi": "Ruokolahti",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"702": {
+"nimi": "Ruovesi",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"704": {
+"nimi": "Rusko",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"707": {
+"nimi": "Rääkkylä",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"729": {
+"nimi": "Saarijärvi",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"732": {
+"nimi": "Salla",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"734": {
+"nimi": "Salo",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"736": {
+"nimi": "Saltvik",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"790": {
+"nimi": "Sastamala",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"738": {
+"nimi": "Sauvo",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"739": {
+"nimi": "Savitaipale",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"740": {
+"nimi": "Savonlinna",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"742": {
+"nimi": "Savukoski",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"743": {
+"nimi": "Seinäjoki",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"746": {
+"nimi": "Sievi",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"747": {
+"nimi": "Siikainen",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"748": {
+"nimi": "Siikajoki",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"791": {
+"nimi": "Siikalatva",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"749": {
+"nimi": "Siilinjärvi",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"751": {
+"nimi": "Simo",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"753": {
+"nimi": "Sipoo",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"755": {
+"nimi": "Siuntio",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"758": {
+"nimi": "Sodankylä",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"759": {
+"nimi": "Soini",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"761": {
+"nimi": "Somero",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"762": {
+"nimi": "Sonkajärvi",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"765": {
+"nimi": "Sotkamo",
+"maakunta": "18",
+"maakunta_nimi": "Kainuu"
+},
+"766": {
+"nimi": "Sottunga",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"768": {
+"nimi": "Sulkava",
+"maakunta": "10",
+"maakunta_nimi": "Etelä-Savo"
+},
+"771": {
+"nimi": "Sund",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"777": {
+"nimi": "Suomussalmi",
+"maakunta": "18",
+"maakunta_nimi": "Kainuu"
+},
+"778": {
+"nimi": "Suonenjoki",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"781": {
+"nimi": "Sysmä",
+"maakunta": "07",
+"maakunta_nimi": "Päijät-Häme"
+},
+"783": {
+"nimi": "Säkylä",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"831": {
+"nimi": "Taipalsaari",
+"maakunta": "09",
+"maakunta_nimi": "Etelä-Karjala"
+},
+"832": {
+"nimi": "Taivalkoski",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"833": {
+"nimi": "Taivassalo",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"834": {
+"nimi": "Tammela",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"837": {
+"nimi": "Tampere",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"844": {
+"nimi": "Tervo",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"845": {
+"nimi": "Tervola",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"846": {
+"nimi": "Teuva",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"848": {
+"nimi": "Tohmajärvi",
+"maakunta": "12",
+"maakunta_nimi": "Pohjois-Karjala"
+},
+"849": {
+"nimi": "Toholampi",
+"maakunta": "16",
+"maakunta_nimi": "Keski-Pohjanmaa"
+},
+"850": {
+"nimi": "Toivakka",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"851": {
+"nimi": "Tornio",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"853": {
+"nimi": "Turku",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"857": {
+"nimi": "Tuusniemi",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"858": {
+"nimi": "Tuusula",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"859": {
+"nimi": "Tyrnävä",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"886": {
+"nimi": "Ulvila",
+"maakunta": "04",
+"maakunta_nimi": "Satakunta"
+},
+"887": {
+"nimi": "Urjala",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"889": {
+"nimi": "Utajärvi",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"890": {
+"nimi": "Utsjoki",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"892": {
+"nimi": "Uurainen",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"893": {
+"nimi": "Uusikaarlepyy",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"895": {
+"nimi": "Uusikaupunki",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"785": {
+"nimi": "Vaala",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"905": {
+"nimi": "Vaasa",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"908": {
+"nimi": "Valkeakoski",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"092": {
+"nimi": "Vantaa",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"915": {
+"nimi": "Varkaus",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"918": {
+"nimi": "Vehmaa",
+"maakunta": "02",
+"maakunta_nimi": "Varsinais-Suomi"
+},
+"921": {
+"nimi": "Vesanto",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"922": {
+"nimi": "Vesilahti",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"924": {
+"nimi": "Veteli",
+"maakunta": "16",
+"maakunta_nimi": "Keski-Pohjanmaa"
+},
+"925": {
+"nimi": "Vieremä",
+"maakunta": "11",
+"maakunta_nimi": "Pohjois-Savo"
+},
+"927": {
+"nimi": "Vihti",
+"maakunta": "01",
+"maakunta_nimi": "Uusimaa"
+},
+"931": {
+"nimi": "Viitasaari",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+},
+"934": {
+"nimi": "Vimpeli",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"935": {
+"nimi": "Virolahti",
+"maakunta": "08",
+"maakunta_nimi": "Kymenlaakso"
+},
+"936": {
+"nimi": "Virrat",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"941": {
+"nimi": "Vårdö",
+"maakunta": "21",
+"maakunta_nimi": "Ahvenanmaa"
+},
+"946": {
+"nimi": "Vöyri",
+"maakunta": "15",
+"maakunta_nimi": "Pohjanmaa"
+},
+"976": {
+"nimi": "Ylitornio",
+"maakunta": "19",
+"maakunta_nimi": "Lappi"
+},
+"977": {
+"nimi": "Ylivieska",
+"maakunta": "17",
+"maakunta_nimi": "Pohjois-Pohjanmaa"
+},
+"980": {
+"nimi": "Ylöjärvi",
+"maakunta": "06",
+"maakunta_nimi": "Pirkanmaa"
+},
+"981": {
+"nimi": "Ypäjä",
+"maakunta": "05",
+"maakunta_nimi": "Kanta-Häme"
+},
+"989": {
+"nimi": "Ähtäri",
+"maakunta": "14",
+"maakunta_nimi": "Etelä-Pohjanmaa"
+},
+"992": {
+"nimi": "Äänekoski",
+"maakunta": "13",
+"maakunta_nimi": "Keski-Suomi"
+}
+},
+"vanhat": {
+"SSS": "Koko maa",
+"001": "Ahlainen",
+"004": "Alahärmä",
+"006": "Alastaro",
+"007": "Alatornio",
+"012": "Anjala",
+"014": "Anttola",
+"015": "Artjärvi",
+"017": "Askainen",
+"032": "Bergö",
+"033": "Björköby",
+"034": "Bromarv",
+"040": "Dragsfjärd",
+"044": "Elimäki",
+"045": "Eno",
+"048": "Eräjärvi",
+"070": "Haapasaari",
+"073": "Halikko",
+"083": "Hauho",
+"084": "Haukipudas",
+"085": "Haukivuori",
+"088": "Heinola",
+"089": "Heinolan mlk",
+"095": "Himanka",
+"099": "Honkajoki",
+"101": "Houtskari",
+"144": "Ikaalinen",
+"150": "Iniö",
+"163": "Jaala",
+"164": "Jalasjärvi",
+"166": "Jepua",
+"173": "Joutseno",
+"174": "Juankoski",
+"175": "Jurva",
+"180": "Jyväskylän mlk",
+"183": "Jämsänkoski",
+"184": "Jäppilä",
+"203": "Kaarlela",
+"206": "Kajaanin mlk",
+"209": "Kalanti",
+"210": "Kalvola",
+"212": "Kangaslampi",
+"201": "Karhula",
+"219": "Karinainen",
+"220": "Karjaa",
+"222": "Karjala",
+"223": "Karjalohja",
+"225": "Karkku",
+"227": "Karttula",
+"229": "Karunki",
+"238": "Keikyä",
+"242": "Kemijärven mlk",
+"243": "Kemiö",
+"246": "Kerimäki",
+"247": "Kestilä",
+"248": "Kesälahti",
+"251": "Kiihtelysvaara",
+"252": "Kiikala",
+"253": "Kiikka",
+"254": "Kiikoinen",
+"255": "Kiiminki",
+"259": "Kisko",
+"262": "Kiukainen",
+"266": "Kodisjoki",
+"270": "Koivulahti",
+"274": "Konginkangas",
+"277": "Korpilahti",
+"279": "Korppoo",
+"281": "Kortesjärvi",
+"283": "Koski Hl",
+"289": "Kuhmalahti",
+"292": "Kuivaniemi",
+"293": "Kullaa",
+"299": "Kuorevesi",
+"303": "Kuru",
+"306": "Kuusankoski",
+"308": "Kuusjoki",
+"310": "Kylmäkoski",
+"311": "Kymi",
+"315": "Kälviä",
+"319": "Köyliö",
+"401": "Lammi",
+"406": "Lappi",
+"409": "Lapväärtti",
+"413": "Lavia",
+"414": "Lehtimäki",
+"415": "Leivonmäki",
+"419": "Lemu",
+"424": "Liljendal",
+"427": "Lohja",
+"428": "Lohjan mlk",
+"429": "Lohtaja",
+"431": "Loimaan mlk",
+"432": "Lokalahti",
+"439": "Luopioinen",
+"442": "Luvia",
+"443": "Längelmäki",
+"476": "Maaninka",
+"479": "Maksamaa",
+"482": "Mellilä",
+"485": "Merimasku",
+"487": "Metsämaa",
+"490": "Mietoinen",
+"492": "Mikkelin mlk",
+"493": "Mouhijärvi",
+"496": "Munsala",
+"501": "Muurla",
+"502": "Muuruvesi",
+"506": "Mänttä",
+"532": "Nastola",
+"533": "Nauvo",
+"534": "Nilsiä",
+"537": "Noormarkku",
+"539": "Nuijamaa",
+"540": "Nummi",
+"542": "Nurmeksen mlk",
+"544": "Nurmo",
+"559": "Oravainen",
+"567": "Oulunsalo",
+"574": "Paattinen",
+"575": "Paavola",
+"573": "Parainen",
+"582": "Pattijoki",
+"585": "Pernaja",
+"586": "Perniö",
+"587": "Pertteli",
+"588": "Pertunmaa",
+"589": "Peräseinäjoki",
+"590": "Petolahti",
+"594": "Pieksämäen mlk",
+"597": "Pielisjärvi",
+"602": "Piikkiö",
+"603": "Piippola",
+"605": "Pirttikylä",
+"606": "Pohja",
+"637": "Pohjaslahti",
+"612": "Porvoo",
+"613": "Porvoon mlk",
+"617": "Pulkkila",
+"618": "Punkaharju",
+"621": "Purmo",
+"622": "Pusula",
+"629": "Pyhämaa",
+"632": "Pyhäselkä",
+"633": "Pylkönmäki",
+"679": "Raippaluoto",
+"682": "Rantsila",
+"685": "Rauman mlk",
+"688": "Rautio",
+"692": "Renko",
+"693": "Revonlahti",
+"695": "Riistavesi",
+"696": "Ristiina",
+"699": "Rovaniemen mlk",
+"701": "Ruotsinpyhtää",
+"705": "Rymättylä",
+"728": "Saari",
+"730": "Sahalahti",
+"735": "Saloinen",
+"737": "Sammatti",
+"741": "Savonranta",
+"750": "Siipyy",
+"752": "Simpele",
+"754": "Sippola",
+"756": "Snappertuna",
+"760": "Somerniemi",
+"769": "Sulva",
+"770": "Sumiainen",
+"772": "Suodenniemi",
+"774": "Suolahti",
+"775": "Suomenniemi",
+"776": "Suomusjärvi",
+"779": "Suoniemi",
+"784": "Särkisalo",
+"786": "Säyneinen",
+"787": "Säynätsalo",
+"788": "Sääksmäki",
+"789": "Sääminki",
+"836": "Tammisaaren mlk",
+"835": "Tammisaari",
+"838": "Tarvasjoki",
+"840": "Teisko",
+"841": "Temmes",
+"842": "Tenhola",
+"847": "Tiukka",
+"864": "Toijala",
+"852": "Tottijärvi",
+"855": "Tuulos",
+"856": "Tuupovaara",
+"860": "Tyrväntö",
+"861": "Tyrvää",
+"863": "Töysä",
+"885": "Ullava",
+"894": "Uudenkaarlepyyn mlk",
+"891": "Uukuniemi",
+"906": "Vahto",
+"909": "Valkeala",
+"911": "Valtimo",
+"912": "Vammala",
+"913": "Vampula",
+"916": "Varpaisjärvi",
+"917": "Vehkalahti",
+"919": "Vehmersalmi",
+"920": "Velkua",
+"923": "Vestanfjärd",
+"926": "Vihanti",
+"928": "Viiala",
+"932": "Viljakkala",
+"933": "Vilppula",
+"937": "Virtasalmi",
+"940": "Vuolijoki",
+"942": "Vähäkyrö",
+"943": "Värtsilä",
+"944": "Vöyri",
+"971": "Ylihärmä",
+"972": "Yli-Ii",
+"973": "Ylikiiminki",
+"974": "Ylimarkku",
+"975": "Ylistaro",
+"978": "Ylämaa",
+"979": "Yläne",
+"990": "Ähtävä",
+"***": "Tuntematon",
+"708": "Ruukki",
+"988": "Äetsä",
+"640": "Pieksänmaa",
+"945": "Vöyri-Maksamaa"
+}
+}

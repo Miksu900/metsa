@@ -1,0 +1,43 @@
+name: Koe Teuva (vertailu Asiakastiedon raporttiin)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  koe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      MML_API_KEY: ${{ secrets.MML_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Asenna paketit
+        run: pip install geopandas pyogrio shapely pandas pyproj
+
+      - name: Lataa Teuvan metsäkuviot
+        run: |
+          mkdir -p work data
+          curl -sS -L -m 1800 -o work/teuva.zip "https://avoin.metsakeskus.fi/aineistot/MV/Kunta/MV_Teuva.zip"
+          ls -la work/teuva.zip
+          (cd work && unzip -o teuva.zip)
+          ls -la work
+
+      - name: Aja koe
+        run: python scripts/koe_teuva.py work/MV_Teuva.gpkg 84640300100054 data/koe-teuva.txt
+
+      - name: Varmista ettei avain päädy tiedostoihin
+        run: |
+          if grep -rqF "$MML_API_KEY" data; then echo "AVAIN LÖYTYI"; exit 1; fi
+          echo OK
+
+      - name: Tallenna tulokset repoon
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/koe-teuva.txt
+          git commit -m "Koe Teuva: tulokset" || echo "ei muutoksia"
+          git push

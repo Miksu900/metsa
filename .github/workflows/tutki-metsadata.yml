@@ -1,0 +1,76 @@
+name: Tutki metsädata (Ylivieska)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tutki:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Asenna GDAL
+        run: sudo apt-get update && sudo apt-get install -y gdal-bin
+
+      - name: Listaa Metsäkeskuksen kuntatiedostot
+        run: |
+          mkdir -p work data
+          curl -sS -L -m 120 -o work/listing.html "https://avoin.metsakeskus.fi/aineistot/MV/Kunta/"
+          wc -c work/listing.html
+          grep -o 'href="[^"]*"' work/listing.html | sed 's/href="//;s/"$//' > work/links.txt
+          wc -l work/links.txt
+          head -40 work/links.txt
+
+      - name: Lataa Ylivieskan tiedosto
+        run: |
+          # Ylivieskan kuntanumero on 977
+          LINK=$(grep -i -E '977|ylivieska' work/links.txt | grep -i -E 'gpkg|zip' | head -1)
+          echo "Löytyi: $LINK"
+          test -n "$LINK"
+          case "$LINK" in
+            http*) URL="$LINK" ;;
+            /*) URL="https://avoin.metsakeskus.fi$LINK" ;;
+            *) URL="https://avoin.metsakeskus.fi/aineistot/MV/Kunta/$LINK" ;;
+          esac
+          echo "URL: $URL"
+          curl -sS -L -m 1800 -o work/ylivieska.bin "$URL"
+          ls -la work/ylivieska.bin
+          file work/ylivieska.bin
+          if file work/ylivieska.bin | grep -qi zip; then
+            (cd work && unzip -o ylivieska.bin)
+          else
+            mv work/ylivieska.bin work/ylivieska.gpkg
+          fi
+          ls -la work
+
+      - name: Tulosta rakenne ja näytteet
+        run: |
+          GPKG=$(ls work/*.gpkg | head -1)
+          {
+            echo "Tiedosto: $GPKG"
+            echo "== Tasot =="
+            ogrinfo -so "$GPKG"
+            echo
+            echo "== Rakenne ja määrät =="
+            ogrinfo -so -al "$GPKG" | head -250
+            echo
+            echo "== Näytteet (3 kuviota) =="
+            for L in $(ogrinfo -so "$GPKG" | sed -n 's/^[0-9]*: \([^ ]*\) .*/\1/p'); do
+              echo "--- $L ---"
+              ogrinfo -al -geom=SUMMARY -fid 1 "$GPKG" "$L" 2>&1 | head -80
+            done
+          } > data/ylivieska-info.txt 2>&1
+          cp work/links.txt data/kunta-linkit.txt
+          wc -l data/ylivieska-info.txt
+
+      - name: Tallenna tulokset repoon
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ylivieska-info.txt data/kunta-linkit.txt
+          git commit -m "Metsädata: Ylivieskan rakenne ja linkkilista" || echo "ei muutoksia"
+          git push

@@ -1,0 +1,59 @@
+{
+ "paivitetty": "2026-10-16",
+ "lahde": "Luonnonvarakeskus, Kantohinnat viikoittain (pystykauppa), CC BY 4.0",
+ "alueet": {
+  "9": {
+   "h": {
+    "N1": 76.95,
+    "N2": 82.86,
+    "N3": 60.29,
+    "N4": 21.93,
+    "N5": 23.63,
+    "N6": 22.44
+   },
+   "v": [
+    "2026W37",
+    "2026W38",
+    "2026W39",
+    "2026W40",
+    "2026W41"
+   ]
+  },
+  "71": {
+   "h": {
+    "N1": 77.62,
+    "N2": 81.62,
+    "N3": 53.49,
+    "N4": 24.9,
+    "N5": 28.22,
+    "N6": 23.76
+   },
+   "v": [
+    "2026W37",
+    "2026W38",
+    "2026W39",
+    "2026W40",
+    "2026W41"
+   ]
+  },
+  "6": {
+   "h": {
+    "N1": 75.78,
+    "N2": 80.47,
+    "N3": 48.88,
+    "N4": 19.78,
+    "N5": 23.29,
+    "N6": 19.34
+   },
+   "v": [
+    "2026W37",
+    "2026W38",
+    "2026W39",
+    "2026W40",
+    "2026W41"
+   ]
+  }
+ },
+ "energia": 9.26,
+ "huom": "Hinnat €/m3: N1 mäntytukki, N2 kuusitukki, N3 koivutukki, N4 mäntykuitu, N5 kuusikuitu, N6 koivukuitu. Energia- ja muun puun hinta kiinteä arvio."
+}

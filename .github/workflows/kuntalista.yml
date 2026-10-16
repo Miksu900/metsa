@@ -1,0 +1,16 @@
+name: Selvitä kuntaluettelo
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p data
+          python scripts/kuntalista.py data/kuntalista-tutkinta.txt
+      - run: |
+          git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
+          git add data/kuntalista-tutkinta.txt; git commit -m "kuntalista tutkinta" || true; git push

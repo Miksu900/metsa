@@ -1,0 +1,45 @@
+name: Esilaske kunnan kiinteistötiedot
+
+on:
+  workflow_dispatch:
+    inputs:
+      kunnat:
+        description: "Kunnat muodossa kuntanro:Nimi, välilyönnillä eroteltuna (esim. 977:Ylivieska 846:Teuva)"
+        default: "846:Teuva 977:Ylivieska"
+
+permissions:
+  contents: write
+
+jobs:
+  laske:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      MML_API_KEY: ${{ secrets.MML_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Asenna paketit
+        run: pip install geopandas pyogrio shapely pandas pyproj numpy
+      - name: Laske kunnat
+        run: |
+          mkdir -p work data/kunnat
+          for K in ${{ inputs.kunnat }}; do
+            NRO=${K%%:*}; NIMI=${K##*:}
+            echo "=== $NRO $NIMI ==="
+            curl -sS -L -m 1800 -o work/$NIMI.zip "https://avoin.metsakeskus.fi/aineistot/MV/Kunta/MV_$NIMI.zip"
+            (cd work && unzip -o -q $NIMI.zip)
+            python scripts/esilaske.py $NRO work/MV_$NIMI.gpkg data/kunnat/$NRO.json
+            rm -f work/$NIMI.zip work/MV_$NIMI.gpkg
+          done
+      - name: Varmista ettei avain päädy tiedostoihin
+        run: |
+          if grep -rqF "$MML_API_KEY" data; then echo "AVAIN LÖYTYI"; exit 1; fi
+          echo OK
+      - name: Tallenna
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add data/kunnat
+          git commit -m "Esilaskenta: kuntien kiinteistötiedot" || echo "ei muutoksia"
+          git push

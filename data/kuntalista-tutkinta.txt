@@ -1,0 +1,2 @@
+kunta-luokituksia: [('kunta_1_20110101', 'Kunnat 2011'), ('kunta_1_20120101', 'Kunnat 2012'), ('kunta_1_20130101', 'Kunnat 2013'), ('kunta_1_20140101', 'Kunnat 2014'), ('kunta_1_20150101', 'Kunnat 2015'), ('kunta_1_20160101', 'Kunnat 2016')]
+maakunta-luokituksia: [('maakunta_1_20210101', 'Maakunnat 2021'), ('maakunta_1_20240101', 'Maakunnat 2024'), ('maakunta_1_20260101', 'Maakunnat 2026'), ('maakunta_1_20250101', 'Maakunnat 2025')]

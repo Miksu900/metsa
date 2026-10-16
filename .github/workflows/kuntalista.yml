@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p data
-          python scripts/kuntalista.py data/kuntalista-tutkinta.txt
+          python scripts/kuntalista.py data/kuntatiedot.json data/kuntalista-tutkinta.txt
       - run: |
           git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
-          git add data/kuntalista-tutkinta.txt; git commit -m "kuntalista tutkinta" || true; git push
+          git add data/kuntalista-tutkinta.txt data/kuntatiedot.json; git commit -m "kuntalista tutkinta" || true; git push

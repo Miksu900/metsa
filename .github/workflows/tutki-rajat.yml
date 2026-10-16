@@ -1,0 +1,61 @@
+name: Tutki kiinteistörajat (Maanmittauslaitos)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tutki:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      MML_API_KEY: ${{ secrets.MML_API_KEY }}
+      BASE: https://avoin-paikkatieto.maanmittauslaitos.fi/kiinteisto-avoin/simple-features/v3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tarkista että avain on olemassa
+        run: |
+          if [ -z "$MML_API_KEY" ]; then echo "MML_API_KEY puuttuu"; exit 1; fi
+          echo "Avain löytyy (pituus ${#MML_API_KEY})"
+
+      - name: Listaa tasot (Basic-tunnistus, avain ei näy vastauksissa)
+        run: |
+          mkdir -p work data
+          CODE=$(curl -sS -m 60 -u "$MML_API_KEY:" -H "Accept: application/json" -o work/collections.json -w "%{http_code}" "$BASE/collections")
+          echo "HTTP $CODE"
+          head -c 600 work/collections.json; echo
+          test "$CODE" = "200"
+          jq -r '.collections[] | "\(.id)\t\(.title)"' work/collections.json | tee data/mml-tasot.txt
+
+      - name: Hae näyte Ylivieskan keskustan alueelta
+        run: |
+          OUT=data/mml-naytteet.txt
+          : > "$OUT"
+          for ID in $(jq -r '.collections[].id' work/collections.json); do
+            echo "=== $ID ===" >> "$OUT"
+            CODE=$(curl -sS -m 60 -u "$MML_API_KEY:" -H "Accept: application/geo+json" -o work/s.json -w "%{http_code}" "$BASE/collections/$ID/items?bbox=24.52,64.06,24.55,64.08&limit=3")
+            echo "HTTP $CODE" >> "$OUT"
+            if [ "$CODE" = "200" ]; then
+              jq -c '{numberReturned, geomType: (.features[0].geometry.type), props: (.features[0].properties), crs: (.crs // null)}' work/s.json >> "$OUT" 2>&1 || head -c 400 work/s.json >> "$OUT"
+            else
+              head -c 300 work/s.json >> "$OUT"
+            fi
+            echo >> "$OUT"
+          done
+          cat "$OUT"
+
+      - name: Varmista ettei avain päädy tiedostoihin
+        run: |
+          if grep -rqF "$MML_API_KEY" data; then echo "AVAIN LÖYTYI TULOSTIEDOSTOSTA"; exit 1; fi
+          echo "Ei avainta tulosteissa"
+
+      - name: Tallenna tulokset repoon
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/mml-tasot.txt data/mml-naytteet.txt
+          git commit -m "MML: tasot ja näytteet" || echo "ei muutoksia"
+          git push

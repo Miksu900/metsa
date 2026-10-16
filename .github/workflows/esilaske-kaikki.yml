@@ -1,0 +1,80 @@
+name: Esilaske kaikki kunnat
+
+on:
+  workflow_dispatch:
+    inputs:
+      alku:
+        description: "Aloitusindeksi (0-pohjainen)"
+        default: "0"
+      loppu:
+        description: "Päätösindeksi (ei mukaan lukien, enintään alku+250)"
+        default: "146"
+
+permissions:
+  contents: write
+
+jobs:
+  suunnittele:
+    runs-on: ubuntu-latest
+    outputs:
+      matriisi: ${{ steps.m.outputs.matriisi }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          python scripts/suunnittele.py ${{ inputs.alku }} ${{ inputs.loppu }} > nimet.json 2>/dev/null
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          n = json.load(open("nimet.json"))
+          print("matriisi=" + json.dumps({"nimi": n}, ensure_ascii=False))
+          PY
+
+  laske:
+    needs: suunnittele
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix: ${{ fromJson(needs.suunnittele.outputs.matriisi) }}
+    env:
+      MML_API_KEY: ${{ secrets.MML_API_KEY }}
+      NIMI: ${{ matrix.nimi }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ohita jos jo laskettu
+        id: ohita
+        run: |
+          if [ -f "data/raw/$NIMI.json.gz" ]; then echo "ohita=1" >> "$GITHUB_OUTPUT"; echo "Valmiina: $NIMI"; else echo "ohita=0" >> "$GITHUB_OUTPUT"; fi
+      - name: Asenna paketit
+        if: steps.ohita.outputs.ohita == '0'
+        run: pip install geopandas pyogrio shapely pandas pyproj numpy
+      - name: Lataa ja laske
+        if: steps.ohita.outputs.ohita == '0'
+        run: |
+          mkdir -p work data/raw
+          ENC=$(python -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$NIMI")
+          for TRY in 1 2 3; do
+            curl -sS -L -f -m 3000 -o work/k.zip "https://avoin.metsakeskus.fi/aineistot/MV/Kunta/MV_$ENC.zip" && break
+            echo "lataus epäonnistui ($TRY)"; sleep 20
+          done
+          (cd work && unzip -o -q k.zip)
+          GP=$(ls work/*.gpkg | head -1)
+          python scripts/esilaske.py "$GP" "work/ulos.json.gz" || python scripts/esilaske.py "$GP" "work/ulos.json.gz"
+          cp work/ulos.json.gz "data/raw/$NIMI.json.gz"
+      - name: Varmista ettei avain päädy tiedostoihin
+        if: steps.ohita.outputs.ohita == '0'
+        run: |
+          if zcat "data/raw/$NIMI.json.gz" | grep -qF "$MML_API_KEY"; then echo "AVAIN LÖYTYI"; exit 1; fi
+      - name: Tallenna tulos
+        if: steps.ohita.outputs.ohita == '0'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add "data/raw/$NIMI.json.gz"
+          git commit -m "Esilaskenta: $NIMI"
+          for i in 1 2 3 4 5 6 7 8; do
+            git pull --rebase origin main && git push && exit 0
+            sleep $((RANDOM % 15 + 5))
+          done
+          exit 1

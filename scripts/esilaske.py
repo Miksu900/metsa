@@ -1,8 +1,8 @@
 """Esilaskenta: yhden kunnan kiinteistökohtaiset puumäärät.
-Käyttö: python esilaske.py KUNTANRO GPKG ULOS.json
+Käyttö: python esilaske.py GPKG ULOS.json.gz
 Yhdistää Metsäkeskuksen metsävarakuviot (ajantasaistettu tila, treestandclass=2)
 ja Maanmittauslaitoksen palstat (PalstanSijaintitiedot)."""
-import base64, json, os, sys, time, urllib.parse, urllib.request
+import base64, gzip, json, os, sys, time, urllib.parse, urllib.request
 import geopandas as gpd
 import numpy as np
 import pandas as pd
@@ -12,7 +12,7 @@ from shapely import force_2d
 from shapely.geometry import shape
 from shapely.ops import transform
 
-KUNTA, GPKG, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
+GPKG, OUT = sys.argv[1], sys.argv[2]
 BASE = "https://avoin-paikkatieto.maanmittauslaitos.fi/kiinteisto-avoin/simple-features/v3"
 AUTH = "Basic " + base64.b64encode((os.environ["MML_API_KEY"] + ":").encode()).decode()
 T0 = time.time()
@@ -52,33 +52,29 @@ stands = stands[["standid", "geometry"]].merge(vol, left_on="standid", right_ind
 for c in vol.columns: stands[c] = stands[c].fillna(0.0)
 stands = gpd.GeoDataFrame(stands, geometry="geometry", crs=3067)
 
-# 2. Palstat MML:stä ruututettuna
-cen = stands.geometry.centroid
-x0, x1 = np.percentile(cen.x, [0.5, 99.5]); y0, y1 = np.percentile(cen.y, [0.5, 99.5])
-m = 2500
-x0, y0, x1, y1 = x0 - m, y0 - m, x1 + m, y1 + m
-log("alue (3067):", round(x0), round(y0), round(x1), round(y1))
+# 2. Palstat MML:stä: haetaan vain ruudut, joissa on kuvioita
 to84 = Transformer.from_crs(3067, 4326, always_xy=True).transform
 to67 = Transformer.from_crs(4326, 3067, always_xy=True).transform
 STEP = 4000
+b = stands.geometry.bounds.values
+ruudut = set()
+for x0, y0, x1, y1 in b:
+    for i in range(int(x0 // STEP), int(x1 // STEP) + 1):
+        for j in range(int(y0 // STEP), int(y1 // STEP) + 1):
+            ruudut.add((i, j))
+log("ruutuja haettavana:", len(ruudut))
 recs = {}
 nreq = 0
-x = x0
-while x < x1:
-    y = y0
-    while y < y1:
-        lo1, la1 = to84(x, y); lo2, la2 = to84(x + STEP, y + STEP)
-        url = f"{BASE}/collections/PalstanSijaintitiedot/items?bbox={lo1:.6f},{la1:.6f},{lo2:.6f},{la2:.6f}&limit=5000"
-        while url:
-            d = http_json(url); nreq += 1
-            for f in d.get("features", []):
-                t = f["properties"].get("kiinteistotunnus", "")
-                if t.startswith(KUNTA):
-                    recs[f["id"]] = (t, f["geometry"])
-            url = next((l["href"] for l in d.get("links", []) if l.get("rel") == "next"), None)
-        y += STEP
-    x += STEP
-    log(f"palstoja tähän mennessä {len(recs)}, pyyntöjä {nreq}")
+for n, (i, j) in enumerate(sorted(ruudut)):
+    lo1, la1 = to84(i * STEP, j * STEP); lo2, la2 = to84((i + 1) * STEP, (j + 1) * STEP)
+    url = f"{BASE}/collections/PalstanSijaintitiedot/items?bbox={min(lo1,lo2):.6f},{min(la1,la2):.6f},{max(lo1,lo2):.6f},{max(la1,la2):.6f}&limit=5000"
+    while url:
+        d = http_json(url); nreq += 1
+        for f in d.get("features", []):
+            t = f["properties"].get("kiinteistotunnus", "")
+            if t: recs[f["id"]] = (t, f["geometry"])
+        url = next((l["href"] for l in d.get("links", []) if l.get("rel") == "next"), None)
+    if n % 50 == 0: log(f"ruutu {n}/{len(ruudut)}, palstoja {len(recs)}, pyyntöjä {nreq}")
 par = gpd.GeoDataFrame({"tunnus": [v[0] for v in recs.values()],
                         "geometry": [transform(to67, shape(v[1])) for v in recs.values()]}, crs=3067)
 par = par.dissolve(by="tunnus").reset_index()
@@ -97,7 +93,7 @@ order = ["ma_t", "ma_k", "ku_t", "ku_k", "ko_t", "ko_k", "le_t", "le_k", "muu"]
 for t, r in g.iterrows():
     if r.ha <= 0: continue
     res[t] = [round(r.ha_tot, 2), round(r.ha, 2), round(r.ha_m1, 2)] + [round(r[c], 1) for c in order]
-meta = {"kunta": KUNTA, "kentat": ["ha_yht", "ha_kuviot", "ha_metsamaa"] + order,
+meta = {"kentat": ["ha_yht", "ha_kuviot", "ha_metsamaa"] + order,
         "huom": "Tilavuudet m3. Lähde: Metsäkeskus metsävarakuviot (ajantasaistettu tila) ja Maanmittauslaitos."}
-json.dump({"meta": meta, "tilat": res}, open(OUT, "w"), separators=(",", ":"))
+json.dump({"meta": meta, "tilat": res}, gzip.open(OUT, "wt", compresslevel=9), separators=(",", ":"))
 log("valmis:", len(res), "kiinteistöä,", os.path.getsize(OUT) // 1024, "kt")

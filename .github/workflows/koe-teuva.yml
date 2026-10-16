@@ -2,6 +2,10 @@ name: Koe Teuva (vertailu Asiakastiedon raporttiin)
 
 on:
   workflow_dispatch:
+    inputs:
+      tunnus:
+        description: "Kiinteistötunnus 14 numeroa (esim. 84640300100054)"
+        default: "84640300100054"
 
 permissions:
   contents: write
@@ -27,7 +31,7 @@ jobs:
           ls -la work
 
       - name: Aja koe
-        run: python scripts/koe_teuva.py work/MV_Teuva.gpkg 84640300100054 data/koe-teuva.txt
+        run: python scripts/koe_teuva.py work/MV_Teuva.gpkg "${{ inputs.tunnus }}" "data/koe-teuva-${{ inputs.tunnus }}.txt"
 
       - name: Varmista ettei avain päädy tiedostoihin
         run: |
@@ -38,6 +42,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add data/koe-teuva.txt
+          git add data/koe-teuva-*.txt
           git commit -m "Koe Teuva: tulokset" || echo "ei muutoksia"
           git push

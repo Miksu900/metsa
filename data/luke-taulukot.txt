@@ -1,8 +1,109 @@
 Juuritaso: [('maa', 'MAATALOUSTILASTOT'), ('met', 'METSÄTILASTOT'), ('kal', 'KALA- JA RIISTATILASTOT'), ('08 Indikaattorit', 'Maaseutuohjelman indikaattorit 2014-2020\n'), ('08a CAP-indikaattorit', 'CAP-vaikuttavuusindikaattorit 2023-2027'), ('08b KMS_2035', 'Kansallinen metsästrategia 2035'), ('09a Kiertotalous', 'Kiertotalous luonnonvara-aloilla'), ('10 Muut', 'Muut')]
-VIRHE 04 Metsa HTTP Error 400: Bad Request
 
-Metsätaulukoita yhteensä: 0
+Metsätaulukoita yhteensä: 208
 
 == Hintoihin viittaavat taulukot ==
+met/enekau/0200_enekau.px | Energiapuun puukauppamäärät neljännesvuosittain
+met/enekau/0400_enekau.px | Energiapuun puukauppamäärät vuosittain
+met/metryv/zz_arkisto/01_Kantohinnat_viikoittain.px | Kantohinnat viikoittain (1997/5-2025/20)
+met/metryv/zz_arkisto/02_Hankintahinnat_viikoittain.px | Hankintahinnat viikoittain (1997/5-2025/20)
+met/metryv/0100_metryv.px | Kantohinnat viikoittain
+met/metryv/0200_metryv.px | Hankintahinnat viikoittain
+met/metryv/0300_metryv.px | Puukauppamäärät viikoittain
+met/teokau/kk/0200_teokau.px | Nimelliset kantohintaindeksit puutavaralajeittain (12/2010=100)
+met/teokau/zz_arkisto/01a_Kantohinnat_kk.px | Pystykauppahinnat kuukausittain 1995-2/2025
+met/teokau/zz_arkisto/01b_Kantohinnat_v.px | Pystykauppahinnat vuosittain 2011-2024
+met/teokau/zz_arkisto/02_Kantohinnat_v_maakunnittain.px | Pystykauppahinnat vuosittain maakunnittain 2016-2024
+met/teokau/zz_arkisto/02b_Kantohinnat_v_meke.px | Kantohinnat vuosittain metsäkeskuksittain 1995-2015
+met/teokau/zz_arkisto/03a_Hankintahinnat_kk.px | Hankintahinnat kuukausittain 1995-2/2025
+met/teokau/zz_arkisto/03b_Hankintahinnat_v.px | Hankintahinnat vuosittain 2011-2024
+met/teokau/zz_arkisto/04_Hankintahinnat_v_maakunnittain.px | Hankintahinnat vuosittain maakunnittain 2016-2024
+met/teokau/zz_arkisto/04b_Hankintahinnat_v_meke.px | Hankintahinnat vuosittain metsäkeskuksittain 1995-2015
+met/teokau/zz_arkisto/05a_Puukauppamaarat_kk.px | Puukauppamäärät kuukausittain 1995-2/2025
+met/teokau/zz_arkisto/05b_Puukauppamaarat_v.px | Puukauppamäärät vuosittain 2011-2024
+met/teokau/zz_arkisto/06_Puukauppamaarat_v_maakunnittain.px | Puukauppamäärät vuosittain maakunnittain 2016-2024
+met/teokau/zz_arkisto/06a_Puukauppamaarat_kk_meke.px | Puukauppamäärät kuukausittain metsäkeskuksittain 1995-2015
+met/teokau/zz_arkisto/06b_Puukauppamaarat_v_meke.px | Puukauppamäärät vuosittain metsäkeskuksittain 1995-2015
+met/teokau/zz_arkisto/07a_Puukauppamaarat_kk_pystykaupat.px | Puukauppamäärät kuukausittain, pystykaupat 1995-2/2025
+met/teokau/zz_arkisto/07b_Puukauppamaarat_v_pkaupat.px | Puukauppamäärät vuosittain, pystykaupat 2011-2024
+met/teokau/zz_arkisto/08_Puukauppamaarat_v_pkaupat_maakunnittain.px | Puukauppamäärät vuosittain maakunnittain, pystykaupat 2016-2024
+met/teokau/zz_arkisto/08a_Puukauppamaarat_kk_pystykaupat_meke.px | Puukauppamäärät kuukausittain metsäkeskuksittain, pystykaupat 1995-2015
+met/teokau/zz_arkisto/08b_Puukauppamaarat_v_pkaupat_meke.px | Puukauppamäärät vuosittain metsäkeskuksittain, pystykaupat 1995-2015
+met/teokau/zz_arkisto/09a_Puukauppamaarat_kk_hankintakaupat.px | Puukauppamäärät kuukausittain, hankintakaupat 1995-2/2025
+met/teokau/zz_arkisto/09b_Puukauppamaarat_v_hkaupat.px | Puukauppamäärät vuosittain, hankintakaupat 2011-2024
+met/teokau/zz_arkisto/10_Puukauppamaarat_v_hkaupat_maakunnittain.px | Puukauppamäärät vuosittain maakunnittain, hankintakaupat 2016-2024
+met/teokau/zz_arkisto/10a_Puukauppamaarat_kk_hankintakaupat_meke.px | Puukauppamäärät kuukausittain metsäkeskuksittain, hankintakaupat 1995-2015
+met/teokau/zz_arkisto/10b_Puukauppamaarat_v_hkaupat_meke.px | Puukauppamäärät vuosittain metsäkeskuksittain, hankintakaupat 1995-2015
+met/teokau/zz_arkisto/11_Reaaliset_khindeksit_alue.px | Reaaliset kantohintaindeksit alueittain (1/1995=100) 1995-2016
 
 == Metatiedot ==
+
+### met/enekau/0200_enekau.px | Energiapuun puukauppamäärät muuttujina Tieto, Kvartaali, Kauppatapa ja Energiapuulaji
+ - INFO (1 arvoa): [('M3T', 'Määrä (1000 m³)')]
+ - Q (50 arvoa): [('2014Q01', '2014Q01'), ('2014Q02', '2014Q02'), ('2014Q03', '2014Q03'), ('2014Q04', '2014Q04'), ('2015Q01', '2015Q01'), ('2015Q02', '2015Q02'), ('2015Q03', '2015Q03'), ('2015Q04', '2015Q04'), ('...', '...'), ('2025Q01', '2025Q01'), ('2025Q02', '2025Q02'), ('2025Q03', '2025Q03'), ('2025Q04', '2025Q04'), ('2026Q01', '2026Q01'), ('2026Q02', '2026Q02')]
+ - KAUP (3 arvoa): [('KAUP_YHT', 'YHTEENSÄ (kauppatavat)'), ('HKAUP', 'Hankintakauppa'), ('PKAUP', 'Pystykauppa')]
+ - ENERPL (5 arvoa): [('ENERPL_YHT', 'YHTEENSÄ (energiapuulajit)'), ('KAN', 'Kannot'), ('HTAH', 'Hakkuutähteet'), ('KOK', 'Kokopuu'), ('RAN', 'Karsittu energiapuu')]
+
+### met/enekau/0400_enekau.px | Energiapuun puukauppamäärät muuttujina Tieto, Vuosi, Kauppatapa ja Energiapuulaji
+ - INFO (1 arvoa): [('M3T', 'Määrä (1000 m³)')]
+ - A (12 arvoa): [('2014', '2014'), ('2015', '2015'), ('2016', '2016'), ('2017', '2017'), ('2018', '2018'), ('2019', '2019'), ('2020', '2020'), ('2021', '2021'), ('2022', '2022'), ('2023', '2023'), ('2024', '2024'), ('2025', '2025')]
+ - KAUP (3 arvoa): [('KAUP_YHT', 'YHTEENSÄ (kauppatavat)'), ('HKAUP', 'Hankintakauppa'), ('PKAUP', 'Pystykauppa')]
+ - ENERPL (5 arvoa): [('ENERPL_YHT', 'YHTEENSÄ (energiapuulajit)'), ('KAN', 'Kannot'), ('HTAH', 'Hakkuutähteet'), ('KOK', 'Kokopuu'), ('RAN', 'Karsittu energiapuu')]
+
+### met/metryv/zz_arkisto/01_Kantohinnat_viikoittain.px | Kantohinnat muuttujina Viikko, Hinta-alue, Hakkuutapa ja Puutavaralaji
+ - Viikko (1477 arvoa): [('1997W05', '1997/05'), ('1997W06', '1997/06'), ('1997W07', '1997/07'), ('1997W08', '1997/08'), ('1997W09', '1997/09'), ('1997W10', '1997/10'), ('1997W11', '1997/11'), ('1997W12', '1997/12'), ('...', '...'), ('2025W15', '2025/15'), ('2025W16', '2025/16'), ('2025W17', '2025/17'), ('2025W18', '2025/18'), ('2025W19', '2025/19'), ('2025W20', '2025/20')]
+ - Hinta-alue (11 arvoa): [('9', 'KOKO MAA'), ('1', 'Etelä-Suomi'), ('3', 'Keski-Suomi'), ('4', 'Savo-Karjala'), ('5', 'Kymi-Savo'), ('6', 'Etelä-Pohjanmaa (2011-)'), ('71', 'Pohjois-Pohjanmaa (2020-)'), ('72', 'Kainuu-Koillismaa (2020-)'), ('8', 'Lappi'), ('7', 'Kainuu-Pohjanmaa (2011-2019)'), ('2', 'Pohjanmaa (-2010)')]
+ - Hakkuutapa (4 arvoa): [('0', 'Pystykauppa yhteensä'), ('8021', '.Uudistushakkuu'), ('8023', '.Harvennushakkuu'), ('8022', '.Ensiharvennus')]
+ - Puutavaralaji (8 arvoa): [('N1', 'Mäntytukki'), ('N2', 'Kuusitukki'), ('N3', 'Koivutukki'), ('N4', 'Mäntykuitupuu'), ('N5', 'Kuusikuitupuu'), ('N6', 'Koivukuitupuu'), ('N7', 'Mäntypikkutukki'), ('N8', 'Kuusipikkutukki')]
+
+### met/metryv/zz_arkisto/02_Hankintahinnat_viikoittain.px | Hankintahinnat muuttujina Viikko, Hinta-alue ja Puutavaralaji
+ - Viikko (1477 arvoa): [('1997W05', '1997/05'), ('1997W06', '1997/06'), ('1997W07', '1997/07'), ('1997W08', '1997/08'), ('1997W09', '1997/09'), ('1997W10', '1997/10'), ('1997W11', '1997/11'), ('1997W12', '1997/12'), ('...', '...'), ('2025W15', '2025/15'), ('2025W16', '2025/16'), ('2025W17', '2025/17'), ('2025W18', '2025/18'), ('2025W19', '2025/19'), ('2025W20', '2025/20')]
+ - Hinta-alue (11 arvoa): [('9', 'KOKO MAA'), ('1', 'Etelä-Suomi'), ('3', 'Keski-Suomi'), ('4', 'Savo-Karjala'), ('5', 'Kymi-Savo'), ('6', 'Etelä-Pohjanmaa (2011-)'), ('71', 'Pohjois-Pohjanmaa (2020-)'), ('72', 'Kainuu-Koillismaa (2020-)'), ('8', 'Lappi'), ('7', 'Kainuu-Pohjanmaa (2011-2019)'), ('2', 'Pohjanmaa (-2010)')]
+ - Puutavaralaji (8 arvoa): [('N1', 'Mäntytukki'), ('N2', 'Kuusitukki'), ('N3', 'Koivutukki'), ('N4', 'Mäntykuitupuu'), ('N5', 'Kuusikuitupuu'), ('N6', 'Koivukuitupuu'), ('N7', 'Mäntypikkutukki'), ('N8', 'Kuusipikkutukki')]
+
+### met/metryv/0100_metryv.px | Kantohinnat muuttujina Tieto, Viikko, Hinta-alue, Hakkuutapa ja Puutavaralaji
+ - INFO (1 arvoa): [('E_M3', 'Euroa/m³')]
+ - W (354 arvoa): [('2020W01', '2020W01'), ('2020W02', '2020W02'), ('2020W03', '2020W03'), ('2020W04', '2020W04'), ('2020W05', '2020W05'), ('2020W06', '2020W06'), ('2020W07', '2020W07'), ('2020W08', '2020W08'), ('...', '...'), ('2026W36', '2026W36'), ('2026W37', '2026W37'), ('2026W38', '2026W38'), ('2026W39', '2026W39'), ('2026W40', '2026W40'), ('2026W41', '2026W41')]
+ - MPKH (9 arvoa): [('9', 'KOKO MAA'), ('1', 'Etelä-Suomi'), ('3', 'Keski-Suomi'), ('4', 'Savo-Karjala'), ('5', 'Kymi-Savo'), ('6', 'Etelä-Pohjanmaa'), ('71', 'Pohjois-Pohjanmaa'), ('72', 'Kainuu-Koillismaa'), ('8', 'Lappi')]
+ - HAKT (4 arvoa): [('0', 'Pystykauppa'), ('8021', '.Uudistushakkuu'), ('8023', '.Harvennushakkuu'), ('8022', '.Ensiharvennus')]
+ - PTL (8 arvoa): [('N1', 'Mäntytukki'), ('N2', 'Kuusitukki'), ('N3', 'Koivutukki'), ('N4', 'Mäntykuitupuu'), ('N5', 'Kuusikuitupuu'), ('N6', 'Koivukuitupuu'), ('N7', 'Mäntypikkutukki'), ('N8', 'Kuusipikkutukki')]
+
+### met/metryv/0200_metryv.px | Hankintahinnat muuttujina Tieto, Viikko, Hinta-alue ja Puutavaralaji
+ - INFO (1 arvoa): [('E_M3', 'Euroa/m³')]
+ - W (354 arvoa): [('2020W01', '2020W01'), ('2020W02', '2020W02'), ('2020W03', '2020W03'), ('2020W04', '2020W04'), ('2020W05', '2020W05'), ('2020W06', '2020W06'), ('2020W07', '2020W07'), ('2020W08', '2020W08'), ('...', '...'), ('2026W36', '2026W36'), ('2026W37', '2026W37'), ('2026W38', '2026W38'), ('2026W39', '2026W39'), ('2026W40', '2026W40'), ('2026W41', '2026W41')]
+ - MPKH (9 arvoa): [('9', 'KOKO MAA'), ('1', 'Etelä-Suomi'), ('3', 'Keski-Suomi'), ('4', 'Savo-Karjala'), ('5', 'Kymi-Savo'), ('6', 'Etelä-Pohjanmaa'), ('71', 'Pohjois-Pohjanmaa'), ('72', 'Kainuu-Koillismaa'), ('8', 'Lappi')]
+ - PTL (8 arvoa): [('N1', 'Mäntytukki'), ('N2', 'Kuusitukki'), ('N3', 'Koivutukki'), ('N4', 'Mäntykuitupuu'), ('N5', 'Kuusikuitupuu'), ('N6', 'Koivukuitupuu'), ('N7', 'Mäntypikkutukki'), ('N8', 'Kuusipikkutukki')]
+
+### met/metryv/0300_metryv.px | Puukauppamäärät muuttujina Viikko, Tieto ja Metsäkeskusalue
+ - W (1188 arvoa): [('2004W02', '2004W02'), ('2004W03', '2004W03'), ('2004W04', '2004W04'), ('2004W05', '2004W05'), ('2004W06', '2004W06'), ('2004W07', '2004W07'), ('2004W08', '2004W08'), ('2004W09', '2004W09'), ('...', '...'), ('2026W36', '2026W36'), ('2026W37', '2026W37'), ('2026W38', '2026W38'), ('2026W39', '2026W39'), ('2026W40', '2026W40'), ('2026W41', '2026W41')]
+ - INFO (1 arvoa): [('M3', 'Kuutiometriä (m³)')]
+ - MEK (15 arvoa): [('1', 'KOKO MAA'), ('11', 'Etelärannikko'), ('12', 'Pohjanmaa'), ('20', 'Lounais-Suomi'), ('30', 'Häme-Uusimaa'), ('40', 'Kaakkois-Suomi'), ('50', 'Pirkanmaa'), ('60', 'Etelä-Savo'), ('70', 'Etelä- ja Keski-Pohjanmaa'), ('80', 'Keski-Suomi'), ('90', 'Pohjois-Savo'), ('100', 'Pohjois-Karjala'), ('110', 'Kainuu'), ('120', 'Pohjois-Pohjanmaa'), ('130', 'Lappi')]
+
+### met/teokau/kk/0200_teokau.px | Nimelliset kantohintaindeksit muuttujina Tieto, Kuukausi ja Puutavaralaji
+ - INFO (1 arvoa): [('KIND', 'Kantohintaindeksi')]
+ - M (189 arvoa): [('2010M12', '2010M12'), ('2011M01', '2011M01'), ('2011M02', '2011M02'), ('2011M03', '2011M03'), ('2011M04', '2011M04'), ('2011M05', '2011M05'), ('2011M06', '2011M06'), ('2011M07', '2011M07'), ('...', '...'), ('2026M03', '2026M03'), ('2026M04', '2026M04'), ('2026M05', '2026M05'), ('2026M06', '2026M06'), ('2026M07', '2026M07'), ('2026M08', '2026M08')]
+ - PTL (6 arvoa): [('TUK_MA', 'Mäntytukki'), ('TUK_KU', 'Kuusitukki'), ('TUK_KO', 'Koivutukki'), ('KUI_MA', 'Mäntykuitupuu'), ('KUI_KU', 'Kuusikuitupuu'), ('KUI_KO', 'Koivukuitupuu')]
+
+### met/teokau/zz_arkisto/01a_Kantohinnat_kk.px | Pystykauppahinnat muuttujina Kuukausi, Hinta-alue, Hakkuutapa ja Puutavaralaji
+ - Kuukausi (362 arvoa): [('1995M01', '1995/01'), ('1995M02', '1995/02'), ('1995M03', '1995/03'), ('1995M04', '1995/04'), ('1995M05', '1995/05'), ('1995M06', '1995/06'), ('1995M07', '1995/07'), ('1995M08', '1995/08'), ('...', '...'), ('2024M09', '2024/09'), ('2024M10', '2024/10'), ('2024M11', '2024/11'), ('2024M12', '2024/12'), ('2025M01', '2025/01'), ('2025M02', '2025/02')]
+ - Hinta-alue (11 arvoa): [('9', 'KOKO MAA'), ('1', 'Etelä-Suomi'), ('3', 'Keski-Suomi'), ('4', 'Savo-Karjala'), ('5', 'Kymi-Savo'), ('6', 'Etelä-Pohjanmaa (2011-)'), ('71', 'Pohjois-Pohjanmaa (2020-)'), ('72', 'Kainuu-Koillismaa (2020-)'), ('8', 'Lappi'), ('7', 'Kainuu-Pohjanmaa (2011-2019)'), ('2', 'Pohjanmaa (-2010)')]
+ - Hakkuutapa (4 arvoa): [('0', 'Pystykauppa yhteensä'), ('8021', '.Uudistushakkuu'), ('8023', '.Harvennushakkuu'), ('8022', '.Ensiharvennus')]
+ - Puutavaralaji (8 arvoa): [('Mäntytukki', 'Mäntytukki'), ('Kuusitukki', 'Kuusitukki'), ('Koivutukki', 'Koivutukki'), ('Mäntykuitupuu', 'Mäntykuitupuu'), ('Kuusikuitupuu', 'Kuusikuitupuu'), ('Koivukuitupuu', 'Koivukuitupuu'), ('Mäntypikkutukki', 'Mäntypikkutukki'), ('Kuusipikkutukki', 'Kuusipikkutukki')]
+
+### met/teokau/zz_arkisto/01b_Kantohinnat_v.px | Pystykauppahinnat muuttujina Vuosi, Hinta-alue, Hakkuutapa ja Puutavaralaji
+ - Vuosi (14 arvoa): [('2011', '2011'), ('2012', '2012'), ('2013', '2013'), ('2014', '2014'), ('2015', '2015'), ('2016', '2016'), ('2017', '2017'), ('2018', '2018'), ('2019', '2019'), ('2020', '2020'), ('2021', '2021'), ('2022', '2022'), ('2023', '2023'), ('2024', '2024')]
+ - Hinta-alue (10 arvoa): [('9', 'KOKO MAA'), ('1', 'Etelä-Suomi'), ('3', 'Keski-Suomi'), ('4', 'Savo-Karjala'), ('5', 'Kymi-Savo'), ('6', 'Etelä-Pohjanmaa (2011-)'), ('71', 'Pohjois-Pohjanmaa (2020-)'), ('72', 'Kainuu-Koillismaa (2020-)'), ('8', 'Lappi'), ('7', 'Kainuu-Pohjanmaa (2011-2019)')]
+ - Hakkuutapa (4 arvoa): [('0', 'Pystykauppa yhteensä'), ('8021', '.Uudistushakkuu'), ('8023', '.Harvennushakkuu'), ('8022', '.Ensiharvennus')]
+ - Puutavaralaji (8 arvoa): [('N1', 'Mäntytukki'), ('N2', 'Kuusitukki'), ('N3', 'Koivutukki'), ('N4', 'Mäntykuitupuu'), ('N5', 'Kuusikuitupuu'), ('N6', 'Koivukuitupuu'), ('N7', 'Mäntypikkutukki'), ('N8', 'Kuusipikkutukki')]
+
+### met/teokau/zz_arkisto/02_Kantohinnat_v_maakunnittain.px | Pystykauppahinnat muuttujina Vuosi, Maakunta, Hakkuutapa ja Puutavaralaji
+ - Vuosi (9 arvoa): [('2016', '2016'), ('2017', '2017'), ('2018', '2018'), ('2019', '2019'), ('2020', '2020'), ('2021', '2021'), ('2022', '2022'), ('2023', '2023'), ('2024', '2024')]
+ - Maakunta (19 arvoa): [('0', 'KOKO MAA'), ('1', '1 Uusimaa'), ('2', '2 Varsinais-Suomi'), ('4', '4 Satakunta'), ('5', '5 Kanta-Häme'), ('6', '6 Pirkanmaa'), ('7', '7 Päijät-Häme'), ('8', '8 Kymenlaakso'), ('9', '9 Etelä-Karjala'), ('10', '10 Etelä-Savo'), ('11', '11 Pohjois-Savo'), ('12', '12 Pohjois-Karjala'), ('13', '13 Keski-Suomi'), ('14', '14 Etelä-Pohjanmaa'), ('15', '15 Pohjanmaa'), ('16', '16 Keski-Pohjanmaa'), ('17', '17 Pohjois-Pohjanmaa'), ('18', '18 Kainuu'), ('19', '19 Lappi')]
+ - Hakkuutapa (4 arvoa): [('0', 'Pystykauppa yhteensä'), ('8021', '.Uudistushakkuu'), ('8023', '.Harvennushakkuu'), ('8022', '.Ensiharvennus')]
+ - Puutavaralaji (8 arvoa): [('Mäntytukki', 'Mäntytukki'), ('Kuusitukki', 'Kuusitukki'), ('Koivutukki', 'Koivutukki'), ('Mäntykuitupuu', 'Mäntykuitupuu'), ('Kuusikuitupuu', 'Kuusikuitupuu'), ('Koivukuitupuu', 'Koivukuitupuu'), ('Mäntypikkutukki', 'Mäntypikkutukki'), ('Kuusipikkutukki', 'Kuusipikkutukki')]
+
+### met/teokau/zz_arkisto/02b_Kantohinnat_v_meke.px | Kantohinnat muuttujina Vuosi, Metsäkeskusalue, Hakkuutapa ja Puutavaralaji
+ - Vuosi (21 arvoa): [('1995', '1995'), ('1996', '1996'), ('1997', '1997'), ('1998', '1998'), ('1999', '1999'), ('2000', '2000'), ('2001', '2001'), ('2002', '2002'), ('2003', '2003'), ('2004', '2004'), ('2005', '2005'), ('2006', '2006'), ('2007', '2007'), ('2008', '2008'), ('2009', '2009'), ('2010', '2010'), ('2011', '2011'), ('2012', '2012'), ('2013', '2013'), ('2014', '2014'), ('2015', '2015')]
+ - Metsäkeskusalue (15 arvoa): [('1', 'KOKO MAA'), ('11', '1a Etelärannikko'), ('12', '1b Pohjanmaa'), ('20', '2 Lounais-Suomi'), ('30', '3 Häme-Uusimaa'), ('40', '4 Kaakkois-Suomi'), ('50', '5 Pirkanmaa'), ('60', '6 Etelä-Savo'), ('70', '7 Etelä- ja Keski-Pohjanmaa'), ('80', '8 Keski-Suomi'), ('90', '9 Pohjois-Savo'), ('100', '10 Pohjois-Karjala'), ('110', '11 Kainuu'), ('120', '12 Pohjois-Pohjanmaa'), ('130', '13 Lappi')]
+ - Hakkuutapa (4 arvoa): [('0', 'Pystyhakkuut yhteensä'), ('8021', '.Uudistushakkuu'), ('8023', '.Harvennushakkuu'), ('8022', '.Ensiharvennus')]
+ - Puutavaralaji (8 arvoa): [('N1', 'Mäntytukki'), ('N2', 'Kuusitukki'), ('N3', 'Koivutukki'), ('N4', 'Mäntykuitupuu'), ('N5', 'Kuusikuitupuu'), ('N6', 'Koivukuitupuu'), ('N7', 'Mäntypikkutukki'), ('N8', 'Kuusipikkutukki')]

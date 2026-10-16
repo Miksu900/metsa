@@ -1,0 +1,756 @@
+Tiedosto: work/MV_Ylivieska.gpkg
+== Tasot ==
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+1: stand (3D Measured Polygon)
+2: actualcutting (None)
+3: cutting (None)
+4: guidingmaterials (None)
+5: treestand (None)
+6: growthplacedata (None)
+7: restriction (None)
+8: harvestedtimberassortments (None)
+9: harvestedbiomass (None)
+10: treestandsummary (None)
+11: treestratum (None)
+12: actualsilviculture (None)
+13: silviculture (None)
+14: codeschema_mapping (None)
+Relationship: cutting_harvestedbiomass (Association, cutting, harvestedbiomass)
+Relationship: cutting_harvestedtimberassortments (Association, cutting, harvestedtimberassortments)
+Relationship: stand_actualcutting (Association, stand, actualcutting)
+Relationship: stand_actualsilviculture (Association, stand, actualsilviculture)
+Relationship: stand_growthplacedata (Association, stand, growthplacedata)
+Relationship: stand_guidingmaterials (Association, stand, guidingmaterials)
+Relationship: stand_restriction (Association, stand, restriction)
+Relationship: stand_silviculture (Association, stand, silviculture)
+Relationship: stand_treestand (Association, stand, treestand)
+Relationship: treestand_treestandsummary (Association, treestand, treestandsummary)
+Relationship: treestand_treestratum (Association, treestand, treestratum)
+
+== Rakenne ja määrät ==
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: stand
+Geometry: 3D Measured Polygon
+Feature Count: 35080
+Extent: (368272.996045, 6857708.206853) - (614250.101000, 7119849.309999)
+Layer SRS WKT:
+PROJCRS["ETRS89 / TM35FIN(E,N)",
+    BASEGEOGCRS["ETRS89",
+        ENSEMBLE["European Terrestrial Reference System 1989 ensemble",
+            MEMBER["European Terrestrial Reference Frame 1989"],
+            MEMBER["European Terrestrial Reference Frame 1990"],
+            MEMBER["European Terrestrial Reference Frame 1991"],
+            MEMBER["European Terrestrial Reference Frame 1992"],
+            MEMBER["European Terrestrial Reference Frame 1993"],
+            MEMBER["European Terrestrial Reference Frame 1994"],
+            MEMBER["European Terrestrial Reference Frame 1996"],
+            MEMBER["European Terrestrial Reference Frame 1997"],
+            MEMBER["European Terrestrial Reference Frame 2000"],
+            MEMBER["European Terrestrial Reference Frame 2005"],
+            MEMBER["European Terrestrial Reference Frame 2014"],
+            ELLIPSOID["GRS 1980",6378137,298.257222101,
+                LENGTHUNIT["metre",1]],
+            ENSEMBLEACCURACY[0.1]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433]],
+        ID["EPSG",4258]],
+    CONVERSION["TM35FIN",
+        METHOD["Transverse Mercator",
+            ID["EPSG",9807]],
+        PARAMETER["Latitude of natural origin",0,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8801]],
+        PARAMETER["Longitude of natural origin",27,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8802]],
+        PARAMETER["Scale factor at natural origin",0.9996,
+            SCALEUNIT["unity",1],
+            ID["EPSG",8805]],
+        PARAMETER["False easting",500000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8806]],
+        PARAMETER["False northing",0,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8807]]],
+    CS[Cartesian,2],
+        AXIS["(E)",east,
+            ORDER[1],
+            LENGTHUNIT["metre",1]],
+        AXIS["(N)",north,
+            ORDER[2],
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Engineering survey, topographic mapping."],
+        AREA["Finland - onshore and offshore."],
+        BBOX[58.84,19.08,70.09,31.59]],
+    ID["EPSG",3067]]
+Data axis to CRS axis mapping: 1,2
+FID Column = id
+Geometry Column = geometry
+standid: Integer64 (0.0) UNIQUE NOT NULL
+standnumber: Integer64 (0.0)
+standnumberextension: String (2.0)
+creationtime: DateTime
+updatetime: DateTime
+area: Real (0.0)
+
+Layer name: actualcutting
+Geometry: None
+Feature Count: 12942
+Layer SRS WKT:
+(unknown)
+FID Column = id
+actualcuttingid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+cuttingtype: String (0.0)
+completionstatus: String (0.0)
+completiondate: Date
+dataupdatedate: Date
+
+Layer name: cutting
+Geometry: None
+Feature Count: 15756
+Layer SRS WKT:
+(unknown)
+FID Column = id
+cuttingid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0)
+type: String (0.0)
+cuttingtype: String (0.0)
+cuttingproposalyear: Integer(Int16) (0.0)
+cuttingdirectingtype: String (0.0)
+cuttingvolume: Real(Float32) (0.0)
+silviculturemethod: String (0.0)
+implementationrate: Integer(Int16) (0.0)
+
+Layer name: guidingmaterials
+Geometry: None
+Feature Count: 257
+Layer SRS WKT:
+(unknown)
+FID Column = id
+guidingmaterialsid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+guidingmaterialstype: String (0.0)
+guidingmaterialsname: String (0.0)
+proportionunderguidance: Real(Float32) (0.0)
+data_identifier: String (0.0)
+
+Layer name: treestand
+Geometry: None
+Feature Count: 110227
+Layer SRS WKT:
+(unknown)
+FID Column = id
+treestandid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+treestandclass: String (0.0)
+treestanddatasource: String (0.0)
+treedatadate: Date
+developmentclass: String (0.0)
+maintreespecies: String (0.0)
+silviculturemethod: String (0.0)
+
+Layer name: growthplacedata
+Geometry: None
+Feature Count: 35080
+Layer SRS WKT:
+(unknown)
+FID Column = id
+growthplacedataid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+maingroup: String (0.0)
+subgroup: String (0.0)
+fertilityclass: String (0.0)
+soiltype: String (0.0)
+drainagestate: String (0.0)
+ditchingyear: Integer(Int16) (0.0)
+harvestaccessibility: String (0.0)
+growthplacedatasource: String (0.0)
+growthplacedate: Date
+
+Layer name: restriction
+Geometry: None
+Feature Count: 1083
+Layer SRS WKT:
+(unknown)
+FID Column = id
+restrictionid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+cuttingrestriction: String (0.0)
+silviculturerestriction: String (0.0)
+
+Layer name: harvestedtimberassortments
+Geometry: None
+Feature Count: 74127
+Layer SRS WKT:
+(unknown)
+FID Column = id
+harvestedtimberassortmentsid: Integer64 (0.0) UNIQUE NOT NULL
+cuttingid: Integer64 (0.0) NOT NULL
+assortments: String (0.0)
+assortmentpercent: Real(Float32) (0.0)
+
+Layer name: harvestedbiomass
+Geometry: None
+Feature Count: 43665
+Layer SRS WKT:
+(unknown)
+FID Column = id
+harvestedbiomassid: Integer64 (0.0) UNIQUE NOT NULL
+cuttingid: Integer64 (0.0) NOT NULL
+treespecies: String (0.0)
+stumpbiomass: Real(Float32) (0.0)
+stembiomass: Real(Float32) (0.0)
+branchbiomass: Real(Float32) (0.0)
+leafbiomass: Real(Float32) (0.0)
+
+Layer name: treestandsummary
+Geometry: None
+Feature Count: 70160
+Layer SRS WKT:
+(unknown)
+FID Column = id
+treestandsummaryid: Integer64 (0.0) UNIQUE NOT NULL
+treestandid: Integer64 (0.0) NOT NULL
+dominantheight: Real(Float32) (0.0)
+age: Integer(Int16) (0.0)
+basalarea: Real(Float32) (0.0)
+stemcount: Integer64 (0.0)
+meandiameter: Real(Float32) (0.0)
+meanheight: Real(Float32) (0.0)
+volume: Real(Float32) (0.0)
+sawlogpercent: Real(Float32) (0.0)
+sawlogvolume: Real(Float32) (0.0)
+pulpwoodvolume: Real(Float32) (0.0)
+volumegrowth: Real(Float32) (0.0)
+stembiomass: Real(Float32) (0.0)
+stumpbiomass: Real(Float32) (0.0)
+branchbiomass: Real(Float32) (0.0)
+leafbiomass: Real(Float32) (0.0)
+storey: String (0.0)
+treestandcarbonstock: Real(Float32) (0.0)
+treestandcarbonstockchange: Real(Float32) (0.0)
+soilcarbonstock: Real(Float32) (0.0)
+soilcarbonstockchange: Real(Float32) (0.0)
+deadtreetype: String (0.0)
+
+Layer name: treestratum
+Geometry: None
+Feature Count: 199362
+Layer SRS WKT:
+(unknown)
+FID Column = id
+treestratumid: Integer64 (0.0) UNIQUE NOT NULL
+treestandid: Integer64 (0.0) NOT NULL
+stratumnumber: Integer(Int16) (0.0)
+storey: String (0.0)
+treespecies: String (0.0)
+age: Integer(Int16) (0.0)
+basalarea: Real(Float32) (0.0)
+stemcount: Integer64 (0.0)
+meandiameter: Real(Float32) (0.0)
+meanheight: Real(Float32) (0.0)
+volume: Real(Float32) (0.0)
+sawlogpercent: Real(Float32) (0.0)
+sawlogvolume: Real(Float32) (0.0)
+pulpwoodvolume: Real(Float32) (0.0)
+volumegrowth: Real(Float32) (0.0)
+stembiomass: Real(Float32) (0.0)
+stumpbiomass: Real(Float32) (0.0)
+branchbiomass: Real(Float32) (0.0)
+leafbiomass: Real(Float32) (0.0)
+deadtreetype: String (0.0)
+treestandcarbonstock: Real(Float32) (0.0)
+treestandcarbonstockchange: Real(Float32) (0.0)
+
+Layer name: actualsilviculture
+Geometry: None
+Feature Count: 9893
+Layer SRS WKT:
+(unknown)
+FID Column = id
+actualsilvicultureid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+silviculturetype: String (0.0)
+completionstatus: String (0.0)
+completiondate: Date
+dataupdatedate: Date
+
+== Näytteet (3 kuviota) ==
+--- stand ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: stand
+Geometry: 3D Measured Polygon
+Feature Count: 35080
+Extent: (368272.996045, 6857708.206853) - (614250.101000, 7119849.309999)
+Layer SRS WKT:
+PROJCRS["ETRS89 / TM35FIN(E,N)",
+    BASEGEOGCRS["ETRS89",
+        ENSEMBLE["European Terrestrial Reference System 1989 ensemble",
+            MEMBER["European Terrestrial Reference Frame 1989"],
+            MEMBER["European Terrestrial Reference Frame 1990"],
+            MEMBER["European Terrestrial Reference Frame 1991"],
+            MEMBER["European Terrestrial Reference Frame 1992"],
+            MEMBER["European Terrestrial Reference Frame 1993"],
+            MEMBER["European Terrestrial Reference Frame 1994"],
+            MEMBER["European Terrestrial Reference Frame 1996"],
+            MEMBER["European Terrestrial Reference Frame 1997"],
+            MEMBER["European Terrestrial Reference Frame 2000"],
+            MEMBER["European Terrestrial Reference Frame 2005"],
+            MEMBER["European Terrestrial Reference Frame 2014"],
+            ELLIPSOID["GRS 1980",6378137,298.257222101,
+                LENGTHUNIT["metre",1]],
+            ENSEMBLEACCURACY[0.1]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433]],
+        ID["EPSG",4258]],
+    CONVERSION["TM35FIN",
+        METHOD["Transverse Mercator",
+            ID["EPSG",9807]],
+        PARAMETER["Latitude of natural origin",0,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8801]],
+        PARAMETER["Longitude of natural origin",27,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8802]],
+        PARAMETER["Scale factor at natural origin",0.9996,
+            SCALEUNIT["unity",1],
+            ID["EPSG",8805]],
+        PARAMETER["False easting",500000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8806]],
+        PARAMETER["False northing",0,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8807]]],
+    CS[Cartesian,2],
+        AXIS["(E)",east,
+            ORDER[1],
+            LENGTHUNIT["metre",1]],
+        AXIS["(N)",north,
+            ORDER[2],
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Engineering survey, topographic mapping."],
+        AREA["Finland - onshore and offshore."],
+        BBOX[58.84,19.08,70.09,31.59]],
+    ID["EPSG",3067]]
+Data axis to CRS axis mapping: 1,2
+FID Column = id
+Geometry Column = geometry
+standid: Integer64 (0.0) UNIQUE NOT NULL
+standnumber: Integer64 (0.0)
+standnumberextension: String (2.0)
+creationtime: DateTime
+updatetime: DateTime
+area: Real (0.0)
+OGRFeature(stand):1
+  standid (Integer64) = 36547314
+  standnumber (Integer64) = 22
+  standnumberextension (String) = (null)
+  creationtime (DateTime) = 2020/10/28 12:59:34+00
+  updatetime (DateTime) = 2025/09/17 00:31:17.805+00
+  area (Real) = 1.122
+  POLYGON : 24 points
+
+--- actualcutting ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: actualcutting
+Geometry: None
+Feature Count: 12942
+Layer SRS WKT:
+(unknown)
+FID Column = id
+actualcuttingid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+cuttingtype: String (0.0)
+completionstatus: String (0.0)
+completiondate: Date
+dataupdatedate: Date
+OGRFeature(actualcutting):1
+  actualcuttingid (Integer64) = 3756659
+  standid (Integer64) = 35869713
+  cuttingtype (String) = 3
+  completionstatus (String) = 4
+  completiondate (Date) = 2024/01/29
+  dataupdatedate (Date) = (null)
+
+--- cutting ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: cutting
+Geometry: None
+Feature Count: 15756
+Layer SRS WKT:
+(unknown)
+FID Column = id
+cuttingid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0)
+type: String (0.0)
+cuttingtype: String (0.0)
+cuttingproposalyear: Integer(Int16) (0.0)
+cuttingdirectingtype: String (0.0)
+cuttingvolume: Real(Float32) (0.0)
+silviculturemethod: String (0.0)
+implementationrate: Integer(Int16) (0.0)
+OGRFeature(cutting):1
+  cuttingid (Integer64) = 48220988
+  standid (Integer64) = 36550493
+  type (String) = 1
+  cuttingtype (String) = 2
+  cuttingproposalyear (Integer(Int16)) = 2032
+  cuttingdirectingtype (String) = (null)
+  cuttingvolume (Real(Float32)) = 31.969999
+  silviculturemethod (String) = (null)
+  implementationrate (Integer(Int16)) = (null)
+
+--- guidingmaterials ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: guidingmaterials
+Geometry: None
+Feature Count: 257
+Layer SRS WKT:
+(unknown)
+FID Column = id
+guidingmaterialsid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+guidingmaterialstype: String (0.0)
+guidingmaterialsname: String (0.0)
+proportionunderguidance: Real(Float32) (0.0)
+data_identifier: String (0.0)
+OGRFeature(guidingmaterials):1
+  guidingmaterialsid (Integer64) = 11430718
+  standid (Integer64) = 22214514
+  guidingmaterialstype (String) = 3
+  guidingmaterialsname (String) = EY-kuvio
+  proportionunderguidance (Real(Float32)) = 100.0
+  data_identifier (String) = 153058
+
+--- treestand ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: treestand
+Geometry: None
+Feature Count: 110227
+Layer SRS WKT:
+(unknown)
+FID Column = id
+treestandid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+treestandclass: String (0.0)
+treestanddatasource: String (0.0)
+treedatadate: Date
+developmentclass: String (0.0)
+maintreespecies: String (0.0)
+silviculturemethod: String (0.0)
+OGRFeature(treestand):1
+  treestandid (Integer64) = 282326795
+  standid (Integer64) = 73654610
+  treestandclass (String) = 1
+  treestanddatasource (String) = 2
+  treedatadate (Date) = 2023/06/19
+  developmentclass (String) = (null)
+  maintreespecies (String) = (null)
+  silviculturemethod (String) = (null)
+
+--- growthplacedata ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: growthplacedata
+Geometry: None
+Feature Count: 35080
+Layer SRS WKT:
+(unknown)
+FID Column = id
+growthplacedataid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+maingroup: String (0.0)
+subgroup: String (0.0)
+fertilityclass: String (0.0)
+soiltype: String (0.0)
+drainagestate: String (0.0)
+ditchingyear: Integer(Int16) (0.0)
+harvestaccessibility: String (0.0)
+growthplacedatasource: String (0.0)
+growthplacedate: Date
+OGRFeature(growthplacedata):1
+  growthplacedataid (Integer64) = 12212013
+  standid (Integer64) = 36547314
+  maingroup (String) = 1
+  subgroup (String) = 1
+  fertilityclass (String) = 4
+  soiltype (String) = 10
+  drainagestate (String) = 3
+  ditchingyear (Integer(Int16)) = (null)
+  harvestaccessibility (String) = 2
+  growthplacedatasource (String) = 9
+  growthplacedate (Date) = 2019/06/28
+
+--- restriction ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: restriction
+Geometry: None
+Feature Count: 1083
+Layer SRS WKT:
+(unknown)
+FID Column = id
+restrictionid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+cuttingrestriction: String (0.0)
+silviculturerestriction: String (0.0)
+OGRFeature(restriction):1
+  restrictionid (Integer64) = 6252832
+  standid (Integer64) = 18643256
+  cuttingrestriction (String) = 9
+  silviculturerestriction (String) = 9
+
+--- harvestedtimberassortments ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: harvestedtimberassortments
+Geometry: None
+Feature Count: 74127
+Layer SRS WKT:
+(unknown)
+FID Column = id
+harvestedtimberassortmentsid: Integer64 (0.0) UNIQUE NOT NULL
+cuttingid: Integer64 (0.0) NOT NULL
+assortments: String (0.0)
+assortmentpercent: Real(Float32) (0.0)
+OGRFeature(harvestedtimberassortments):1
+  harvestedtimberassortmentsid (Integer64) = 227670240
+  cuttingid (Integer64) = 48261661
+  assortments (String) = 6
+  assortmentpercent (Real(Float32)) = 30.940001
+
+--- harvestedbiomass ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: harvestedbiomass
+Geometry: None
+Feature Count: 43665
+Layer SRS WKT:
+(unknown)
+FID Column = id
+harvestedbiomassid: Integer64 (0.0) UNIQUE NOT NULL
+cuttingid: Integer64 (0.0) NOT NULL
+treespecies: String (0.0)
+stumpbiomass: Real(Float32) (0.0)
+stembiomass: Real(Float32) (0.0)
+branchbiomass: Real(Float32) (0.0)
+leafbiomass: Real(Float32) (0.0)
+OGRFeature(harvestedbiomass):1
+  harvestedbiomassid (Integer64) = 133635824
+  cuttingid (Integer64) = 50860767
+  treespecies (String) = 2
+  stumpbiomass (Real(Float32)) = 16.610001
+  stembiomass (Real(Float32)) = 0.63
+  branchbiomass (Real(Float32)) = 10.12
+  leafbiomass (Real(Float32)) = 6.89
+
+--- treestandsummary ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: treestandsummary
+Geometry: None
+Feature Count: 70160
+Layer SRS WKT:
+(unknown)
+FID Column = id
+treestandsummaryid: Integer64 (0.0) UNIQUE NOT NULL
+treestandid: Integer64 (0.0) NOT NULL
+dominantheight: Real(Float32) (0.0)
+age: Integer(Int16) (0.0)
+basalarea: Real(Float32) (0.0)
+stemcount: Integer64 (0.0)
+meandiameter: Real(Float32) (0.0)
+meanheight: Real(Float32) (0.0)
+volume: Real(Float32) (0.0)
+sawlogpercent: Real(Float32) (0.0)
+sawlogvolume: Real(Float32) (0.0)
+pulpwoodvolume: Real(Float32) (0.0)
+volumegrowth: Real(Float32) (0.0)
+stembiomass: Real(Float32) (0.0)
+stumpbiomass: Real(Float32) (0.0)
+branchbiomass: Real(Float32) (0.0)
+leafbiomass: Real(Float32) (0.0)
+storey: String (0.0)
+treestandcarbonstock: Real(Float32) (0.0)
+treestandcarbonstockchange: Real(Float32) (0.0)
+soilcarbonstock: Real(Float32) (0.0)
+soilcarbonstockchange: Real(Float32) (0.0)
+deadtreetype: String (0.0)
+OGRFeature(treestandsummary):1
+  treestandsummaryid (Integer64) = 251195789
+  treestandid (Integer64) = 282326858
+  dominantheight (Real(Float32)) = 3.1300001
+  age (Integer(Int16)) = 10
+  basalarea (Real(Float32)) = 0.69
+  stemcount (Integer64) = 3029
+  meandiameter (Real(Float32)) = 1.98
+  meanheight (Real(Float32)) = 2.47
+  volume (Real(Float32)) = 1.06
+  sawlogpercent (Real(Float32)) = 0.0
+  sawlogvolume (Real(Float32)) = 0.0
+  pulpwoodvolume (Real(Float32)) = 0.0
+  volumegrowth (Real(Float32)) = 0.4
+  stembiomass (Real(Float32)) = 0.0
+  stumpbiomass (Real(Float32)) = 0.0
+  branchbiomass (Real(Float32)) = 0.0
+  leafbiomass (Real(Float32)) = 0.0
+  storey (String) = 1
+  treestandcarbonstock (Real(Float32)) = (null)
+  treestandcarbonstockchange (Real(Float32)) = (null)
+  soilcarbonstock (Real(Float32)) = (null)
+  soilcarbonstockchange (Real(Float32)) = (null)
+  deadtreetype (String) = (null)
+
+--- treestratum ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: treestratum
+Geometry: None
+Feature Count: 199362
+Layer SRS WKT:
+(unknown)
+FID Column = id
+treestratumid: Integer64 (0.0) UNIQUE NOT NULL
+treestandid: Integer64 (0.0) NOT NULL
+stratumnumber: Integer(Int16) (0.0)
+storey: String (0.0)
+treespecies: String (0.0)
+age: Integer(Int16) (0.0)
+basalarea: Real(Float32) (0.0)
+stemcount: Integer64 (0.0)
+meandiameter: Real(Float32) (0.0)
+meanheight: Real(Float32) (0.0)
+volume: Real(Float32) (0.0)
+sawlogpercent: Real(Float32) (0.0)
+sawlogvolume: Real(Float32) (0.0)
+pulpwoodvolume: Real(Float32) (0.0)
+volumegrowth: Real(Float32) (0.0)
+stembiomass: Real(Float32) (0.0)
+stumpbiomass: Real(Float32) (0.0)
+branchbiomass: Real(Float32) (0.0)
+leafbiomass: Real(Float32) (0.0)
+deadtreetype: String (0.0)
+treestandcarbonstock: Real(Float32) (0.0)
+treestandcarbonstockchange: Real(Float32) (0.0)
+OGRFeature(treestratum):1
+  treestratumid (Integer64) = 381695496
+  treestandid (Integer64) = 211620278
+  stratumnumber (Integer(Int16)) = 2
+  storey (String) = 1
+  treespecies (String) = 2
+  age (Integer(Int16)) = 75
+  basalarea (Real(Float32)) = 21.35
+  stemcount (Integer64) = 787
+  meandiameter (Real(Float32)) = 23.75
+  meanheight (Real(Float32)) = 18.83
+  volume (Real(Float32)) = 190.92
+  sawlogpercent (Real(Float32)) = (null)
+  sawlogvolume (Real(Float32)) = 0.0
+  pulpwoodvolume (Real(Float32)) = 0.0
+  volumegrowth (Real(Float32)) = (null)
+  stembiomass (Real(Float32)) = (null)
+  stumpbiomass (Real(Float32)) = (null)
+  branchbiomass (Real(Float32)) = (null)
+  leafbiomass (Real(Float32)) = (null)
+  deadtreetype (String) = (null)
+  treestandcarbonstock (Real(Float32)) = (null)
+  treestandcarbonstockchange (Real(Float32)) = (null)
+
+--- actualsilviculture ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: actualsilviculture
+Geometry: None
+Feature Count: 9893
+Layer SRS WKT:
+(unknown)
+FID Column = id
+actualsilvicultureid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+silviculturetype: String (0.0)
+completionstatus: String (0.0)
+completiondate: Date
+dataupdatedate: Date
+OGRFeature(actualsilviculture):1
+  actualsilvicultureid (Integer64) = 2368866
+  standid (Integer64) = 73342413
+  silviculturetype (String) = 302
+  completionstatus (String) = 1
+  completiondate (Date) = 2022/06/01
+  dataupdatedate (Date) = (null)
+
+--- silviculture ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: silviculture
+Geometry: None
+Feature Count: 28840
+Layer SRS WKT:
+(unknown)
+FID Column = id
+silvicultureid: Integer64 (0.0) UNIQUE NOT NULL
+standid: Integer64 (0.0) NOT NULL
+silviculturetype: String (0.0)
+proposalyear: Integer(Int16) (0.0)
+silvicultureextraqualifiertype_1: String (0.0)
+silvicultureextraqualifiertype_2: String (0.0)
+proposaltype: String (0.0)
+silviculturemethod: String (0.0)
+implementationrate: Integer(Int16) (0.0)
+OGRFeature(silviculture):1
+  silvicultureid (Integer64) = 1841077
+  standid (Integer64) = 36546563
+  silviculturetype (String) = 660
+  proposalyear (Integer(Int16)) = 2020
+  silvicultureextraqualifiertype_1 (String) = (null)
+  silvicultureextraqualifiertype_2 (String) = (null)
+  proposaltype (String) = 2
+  silviculturemethod (String) = (null)
+  implementationrate (Integer(Int16)) = (null)
+
+--- codeschema_mapping ---
+INFO: Open of `work/MV_Ylivieska.gpkg'
+      using driver `GPKG' successful.
+
+Layer name: codeschema_mapping
+Geometry: None
+Feature Count: 723
+Layer SRS WKT:
+(unknown)
+FID Column = id
+table_name: String (0.0)
+field_name: String (0.0)
+codegroupname_fin: String (0.0)
+codevalue: String (0.0)
+codelabel_fin: String (0.0)
+OGRFeature(codeschema_mapping):1
+  table_name (String) = actualcutting
+  field_name (String) = completionstatus
+  codegroupname_fin (String) = Toteutuksen tila (v.1.0)
+  codevalue (String) = 0
+  codelabel_fin (String) = Ei tietoa
+

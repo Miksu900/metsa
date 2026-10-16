@@ -19,7 +19,7 @@ def walk(path, depth):
             tables.append((path + [it["id"]], it["text"]))
     return tables
 p("Juuritaso:", [(i["id"], i["text"]) for i in get([])])
-tables = walk(["04 Metsa"], 3)
+tables = walk(["met"], 4)
 p("\nMetsätaulukoita yhteensä:", len(tables))
 hit = [(pp, t) for pp, t in tables if re.search(r"kantohin|puukauppa|hinn", t + " ".join(pp), re.I)]
 p("\n== Hintoihin viittaavat taulukot ==")

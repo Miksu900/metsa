@@ -1,0 +1,28 @@
+=== ProjisoidunPalstanSijaintitiedot ===
+HTTP 200
+{"numberReturned":0,"geomType":null,"props":null,"crs":null}
+
+=== KiinteistotunnuksenSijaintitiedot ===
+HTTP 200
+{"numberReturned":3,"geomType":"Point","props":{"kiinteistotunnus":"97740600010410","kiinteistotunnuksenEsitysmuoto":"977-406-1-410"},"crs":null}
+
+=== MaaraalanOsanSijaintitiedot ===
+HTTP 200
+{"numberReturned":3,"geomType":"Point","props":{"maaraalatunnus":"97740600050333M0602","maaraalatunnuksenEsitysmuoto":"977-406-5-333-M602","olotila":1,"suhdePeruskiinteistoon":0,"maaraalanSijainninSijoitustapa":2,"maaraalatunnuksenSijainti":null},"crs":null}
+
+=== KiinteistorajanSijaintitiedot ===
+HTTP 200
+{"numberReturned":3,"geomType":"LineString","props":{"kiinteistorajalaji":696,"lahdeaineisto":4,"interpolointitapa":1},"crs":null}
+
+=== PalstanSijaintitiedot ===
+HTTP 200
+{"numberReturned":3,"geomType":"Polygon","props":{"kiinteistotunnus":"97740600010410","kiinteistotunnuksenEsitysmuoto":"977-406-1-410","kiinteistotunnuksenSijainti":{"type":"Point","coordinates":[24.54665402,64.06009019]}},"crs":null}
+
+=== RajamerkinSijaintitiedot ===
+HTTP 200
+{"numberReturned":3,"geomType":"Point","props":{"rajamerkkilaji":600,"numero":"55","tasosijaintitarkkuus":0.2,"rakenne":1,"lahdeaineisto":4,"suhdeMaanpintaan":1,"olemassaolo":1},"crs":null}
+
+=== ProjisoidunPalstanKiinteistotunnuksenSijaintitiedot ===
+HTTP 200
+{"numberReturned":0,"geomType":null,"props":null,"crs":null}
+

@@ -66,8 +66,13 @@ for r in ["ma", "ku", "ko", "le"]:
 vol3["f_muu"] = 0.0
 for sid in vol3.index:
     f = _s3.loc[sid] if sid in _s3.index else None
-    if f is None: continue
     c = vol.loc[sid] if sid in vol.index else None
+    if f is None:
+        if c is not None:
+            for r in ["ma", "ku", "ko", "le"]:
+                vol3.at[sid, "f_" + r + "_t"] = c[r + "_t"]; vol3.at[sid, "f_" + r + "_k"] = c[r + "_k"]
+            vol3.at[sid, "f_muu"] = c["muu"]
+        continue
     c2 = _s2.loc[sid] if sid in _s2.index else None
     ft, fk = float(f.sawlogvolume or 0), float(f.pulpwoodvolume or 0)
     fm = max(float(f.volume or 0) - ft - fk, 0.0)

@@ -1,0 +1,8 @@
+Juuritaso: [('maa', 'MAATALOUSTILASTOT'), ('met', 'METSÄTILASTOT'), ('kal', 'KALA- JA RIISTATILASTOT'), ('08 Indikaattorit', 'Maaseutuohjelman indikaattorit 2014-2020\n'), ('08a CAP-indikaattorit', 'CAP-vaikuttavuusindikaattorit 2023-2027'), ('08b KMS_2035', 'Kansallinen metsästrategia 2035'), ('09a Kiertotalous', 'Kiertotalous luonnonvara-aloilla'), ('10 Muut', 'Muut')]
+VIRHE 04 Metsa HTTP Error 400: Bad Request
+
+Metsätaulukoita yhteensä: 0
+
+== Hintoihin viittaavat taulukot ==
+
+== Metatiedot ==

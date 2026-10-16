@@ -34,22 +34,46 @@ stands = gpd.read_file(GPKG, layer="stand")
 stands["geometry"] = stands.geometry.apply(force_2d)
 log("kuvioita", len(stands))
 def tbl(n): return pyogrio.read_dataframe(GPKG, layer=n, read_geometry=False)
-ts = tbl("treestand"); ts = ts[ts.treestandclass == "2"][["treestandid", "standid"]]
-st = tbl("treestratum")[["treestandid", "treespecies", "volume", "sawlogvolume", "pulpwoodvolume"]]
-st = st.merge(ts, on="treestandid")
 RYHMA = {"1": "ma", "2": "ku", "3": "ko", "4": "ko", "27": "ko",
          "8": "ku", "10": "ku", "11": "ku", "12": "ma", "14": "ku", "16": "ku", "19": "ku", "22": "ma", "23": "ku", "30": "ku"}
-st["r"] = st.treespecies.astype(str).map(lambda c: RYHMA.get(c, "le"))
-st["muu"] = (st.volume - st.sawlogvolume.fillna(0) - st.pulpwoodvolume.fillna(0)).clip(lower=0)
-cols = {}
-for r in ["ma", "ku", "ko", "le"]:
-    s = st[st.r == r].groupby("standid")
-    cols[r + "_t"] = s.sawlogvolume.sum(); cols[r + "_k"] = s.pulpwoodvolume.sum()
-cols["muu"] = st.groupby("standid").muu.sum()
-vol = pd.DataFrame(cols).fillna(0.0)
-gp = tbl("growthplacedata")[["standid", "maingroup"]]
-stands = stands[["standid", "geometry"]].merge(vol, left_on="standid", right_index=True, how="left").merge(gp, on="standid", how="left")
-for c in vol.columns: stands[c] = stands[c].fillna(0.0)
+ts_all = tbl("treestand")
+st_all = tbl("treestratum")[["treestandid", "treespecies", "volume", "sawlogvolume", "pulpwoodvolume"]]
+def vol_frame(luokka, etuliite=""):
+    ts = ts_all[ts_all.treestandclass == luokka][["treestandid", "standid"]]
+    st = st_all.merge(ts, on="treestandid")
+    st["r"] = st.treespecies.astype(str).map(lambda c: RYHMA.get(c, "le"))
+    st["muu"] = (st.volume - st.sawlogvolume.fillna(0) - st.pulpwoodvolume.fillna(0)).clip(lower=0)
+    cols = {}
+    for r in ["ma", "ku", "ko", "le"]:
+        s = st[st.r == r].groupby("standid")
+        cols[etuliite + r + "_t"] = s.sawlogvolume.sum(); cols[etuliite + r + "_k"] = s.pulpwoodvolume.sum()
+    cols[etuliite + "muu"] = st.groupby("standid").muu.sum()
+    return pd.DataFrame(cols).fillna(0.0)
+vol = vol_frame("2")            # ajantasaistettu tila
+vol3 = vol_frame("3", "f_")     # ennuste noin 10 vuotta eteenpäin
+gp = tbl("growthplacedata")[["standid", "maingroup", "fertilityclass"]]
+# ikä ja kehitysluokka (ajantasaistettu tila)
+ts2 = ts_all[ts_all.treestandclass == "2"][["treestandid", "standid", "developmentclass"]]
+tsum = tbl("treestandsummary")[["treestandid", "age", "storey", "volume"]]
+tsum = tsum[tsum.storey.astype(str) == "1"].merge(ts2, on="treestandid")
+tsum = tsum.sort_values("volume", ascending=False).drop_duplicates("standid")
+ika = tsum.set_index("standid")["age"]
+kehit = ts2.dropna(subset=["developmentclass"]).drop_duplicates("standid").set_index("standid")["developmentclass"]
+rajoitettu = set(tbl("restriction").standid)
+stands = stands[["standid", "geometry"]].merge(vol, left_on="standid", right_index=True, how="left") \
+    .merge(vol3, left_on="standid", right_index=True, how="left").merge(gp, on="standid", how="left")
+for c in list(vol.columns) + list(vol3.columns): stands[c] = stands[c].fillna(0.0)
+stands["ika"] = stands.standid.map(ika)
+stands["kehit"] = stands.standid.map(kehit).astype(object).fillna("?")
+stands["rajoitus"] = stands.standid.isin(rajoitettu)
+stands["kasvupaikka"] = stands.fertilityclass.astype(object).fillna("?")
+IKA_RAJAT = [20, 40, 60, 80, 100]
+def ikaluokka(a):
+    if a is None or a != a or a <= 0: return 6
+    for i, r in enumerate(IKA_RAJAT):
+        if a <= r: return i
+    return 5
+stands["ikal"] = stands.ika.map(ikaluokka)
 stands = gpd.GeoDataFrame(stands, geometry="geometry", crs=3067)
 
 # 2. Palstat MML:stä: haetaan vain ruudut, joissa on kuvioita
@@ -83,17 +107,32 @@ log("kiinteistöjä", len(par))
 # 3. Leikkaus
 ov = gpd.overlay(stands, par, how="intersection", keep_geom_type=True)
 ov["ha"] = ov.geometry.area / 10000
-for c in vol.columns: ov[c] = ov[c] * ov.ha
+vcols = list(vol.columns); fcols = list(vol3.columns)
+for c in vcols + fcols: ov[c] = ov[c] * ov.ha
 ov["ha_m1"] = np.where(ov.maingroup.astype(str) == "1", ov.ha, 0.0)
-g = ov.groupby("tunnus")[list(vol.columns) + ["ha", "ha_m1"]].sum()
+g = ov.groupby("tunnus")[vcols + fcols + ["ha", "ha_m1"]].sum()
 par["ha_tot"] = par.geometry.area / 10000
 g = g.join(par.set_index("tunnus").ha_tot, how="right").fillna(0.0)
-res = {}
+ika_ha = ov.pivot_table(index="tunnus", columns="ikal", values="ha", aggfunc="sum", fill_value=0.0)
+kehit_ha = ov.groupby(["tunnus", "kehit"]).ha.sum()
+kasv_ha = ov.groupby(["tunnus", "kasvupaikka"]).ha.sum()
+rajoitus_ha = ov[ov.rajoitus].groupby("tunnus").ha.sum()
+res = {}; laaja = {}
 order = ["ma_t", "ma_k", "ku_t", "ku_k", "ko_t", "ko_k", "le_t", "le_k", "muu"]
+kehit_d = {}; kasv_d = {}
+for (t, k), v in kehit_ha.items():
+    if v >= 0.01: kehit_d.setdefault(t, {})[k] = round(v, 2)
+for (t, k), v in kasv_ha.items():
+    if v >= 0.01: kasv_d.setdefault(t, {})[k] = round(v, 2)
 for t, r in g.iterrows():
     if r.ha <= 0: continue
     res[t] = [round(r.ha_tot, 2), round(r.ha, 2), round(r.ha_m1, 2)] + [round(r[c], 1) for c in order]
+    ik = [round(float(ika_ha.loc[t].get(i, 0.0)), 2) for i in range(1, 8)] if False else [round(float(ika_ha.loc[t].get(i, 0.0)), 2) for i in range(0, 7)]
+    laaja[t] = {"e": [round(r["f_" + c], 1) for c in order], "i": ik, "k": kehit_d.get(t, {}),
+                "s": kasv_d.get(t, {}), "r": round(float(rajoitus_ha.get(t, 0.0)), 2)}
 meta = {"kentat": ["ha_yht", "ha_kuviot", "ha_metsamaa"] + order,
         "huom": "Tilavuudet m3. Lähde: Metsäkeskus metsävarakuviot (ajantasaistettu tila) ja Maanmittauslaitos."}
 json.dump({"meta": meta, "tilat": res}, gzip.open(OUT, "wt", compresslevel=9), separators=(",", ":"))
+json.dump({"meta": {"ika_rajat": IKA_RAJAT, "huom": "e=ennuste (noin 10 v), i=ha ikäluokittain (<=20,<=40,<=60,<=80,<=100,>100,tuntematon), k=ha kehitysluokittain, s=ha kasvupaikoittain, r=ha rajoitettua"},
+           "tilat": laaja}, gzip.open(OUT.replace(".json.gz", ".laaja.json.gz"), "wt", compresslevel=9), separators=(",", ":"))
 log("valmis:", len(res), "kiinteistöä,", os.path.getsize(OUT) // 1024, "kt")

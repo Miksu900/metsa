@@ -66,7 +66,7 @@ def lataa_data():
     kunnat, vanhat = kt["kunnat"], kt["vanhat"]
     nimi2koodi = {v["nimi"]: k for k, v in kunnat.items()}
     tiedostot = {}
-    for f in sorted((ROOT / "data/raw").glob("*.json.gz")):
+    for f in sorted(p for p in (ROOT / "data/raw").glob("*.json.gz") if ".laaja." not in p.name):
         nimi = f.name[:-len(".json.gz")]
         tiedostot[nimi] = json.load(gzip.open(f, "rt"))["tilat"]
     puuttuvat = [n for n in tiedostot if n not in nimi2koodi]

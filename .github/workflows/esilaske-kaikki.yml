@@ -45,7 +45,7 @@ jobs:
       - name: Ohita jos jo laskettu
         id: ohita
         run: |
-          if [ -f "data/raw/$NIMI.json.gz" ]; then echo "ohita=1" >> "$GITHUB_OUTPUT"; echo "Valmiina: $NIMI"; else echo "ohita=0" >> "$GITHUB_OUTPUT"; fi
+          if [ -f "data/raw/$NIMI.laaja.json.gz" ]; then echo "ohita=1" >> "$GITHUB_OUTPUT"; echo "Valmiina: $NIMI"; else echo "ohita=0" >> "$GITHUB_OUTPUT"; fi
       - name: Asenna paketit
         if: steps.ohita.outputs.ohita == '0'
         run: pip install geopandas pyogrio shapely pandas pyproj numpy
@@ -61,7 +61,7 @@ jobs:
           (cd work && unzip -o -q k.zip)
           GP=$(ls work/*.gpkg | head -1)
           python scripts/esilaske.py "$GP" "work/ulos.json.gz" || python scripts/esilaske.py "$GP" "work/ulos.json.gz"
-          cp work/ulos.json.gz "data/raw/$NIMI.json.gz"
+          cp work/ulos.json.gz "data/raw/$NIMI.json.gz"; cp work/ulos.laaja.json.gz "data/raw/$NIMI.laaja.json.gz"
       - name: Varmista ettei avain päädy tiedostoihin
         if: steps.ohita.outputs.ohita == '0'
         run: |
@@ -71,7 +71,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add "data/raw/$NIMI.json.gz"
+          git add "data/raw/$NIMI.json.gz" "data/raw/$NIMI.laaja.json.gz"
           git commit -m "Esilaskenta: $NIMI"
           for i in 1 2 3 4 5 6 7 8; do
             git pull --rebase origin main && git push && exit 0
